@@ -1,0 +1,82 @@
+@charset "utf-8";
+@use "../function/index" as *;
+
+// ------------ COMMON HEADER ------------
+
+header {
+	width: 100%;
+}
+
+.header-inner {
+	height: 80px;
+	margin: auto;
+
+	@include mq() {
+		min-width: inherit;
+		height: 55px;
+	}
+}
+
+// Logo
+.header-logo {
+	@extend .vertical;
+	margin: 0% 5%;
+	a {
+		display: block;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+// CV
+.header-cv {
+	width: 200px;
+	height: 100%;
+	position: absolute;
+	display: inline-grid;
+	div{
+		.doc{
+			width: 150px;
+			display: block;
+			background-color: $sub-color;
+			a {
+				margin: auto 10px;
+				@include link-color(#FFF);
+				font-weight: bold;
+			}
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		.contact {
+			width: 150px;
+			display: block;
+			background-color: $main-color;
+			a {
+				margin: auto 15%;
+				@include link-color(#FFF);
+				font-weight: bold;
+			}
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+	
+
+	@include abs-position(0px, 0px, auto, auto);
+
+	img {
+		margin: auto;
+	}	
+}
+
+// ------------　スクロール後FIXED設定 ------------
+
+header.fixed {
+	background: rgba(255,255,255,.7);
+	position: fixed;
+	z-index: 100;
+}

@@ -1,0 +1,100 @@
+@charset "utf-8";
+@use "../function/index" as *;
+
+// ------------ FRONT ------------
+
+// トップページ
+div.front {
+
+
+
+}
+
+
+div.top_view {
+	width: 100%;
+
+	.block {
+		img {
+			width: 100%;
+		}
+	}
+
+	// 画像をPC/SPで変更する場合
+	.slick-slide img {
+		&.hide_sp {
+			@extend .hide_sp;
+		}
+		&.hide_pc {
+			@extend .hide_pc;
+		}
+	}
+
+	// 前・次ボタンの設定
+	.slick-prev,
+	.slick-next {
+		width: 5%;
+		height: 100%;
+		position: absolute;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 30px 30px;
+
+		@include mq() {
+			width: 10%;
+		}
+	}
+
+	.slick-prev:before,
+	.slick-next:before {
+		content:"";
+	}
+
+	// 前ボタンの設定
+	.slick-prev {
+		left: 0;
+		background-image:url(../img/arrow/arrow_left_w.svg);
+	}
+
+	// 次ボタンの設定
+	.slick-next {
+		right: 0;
+		background-image:url(../img/arrow/arrow_right_w.svg);
+	}
+
+	.slick-arrow {
+		z-index: 10;
+	}
+
+	// docボタンの設定
+	.slick-dots {
+		bottom: 10px;
+
+		li {
+			width: 10px;
+			height: 10px;
+			button {
+				width: 10px;
+				height: 10px;
+				padding: 0;
+				border-radius: 50%;
+				background-color: $bg-color;
+				@extend .transitions;
+
+				&:hover {
+					background-color: $main-color;
+				}
+				&:before {
+					display: none;
+				}
+			}
+
+			&.slick-active {
+				button {
+					background-color: $main-color;
+				}
+			}
+		}
+	}
+
+}

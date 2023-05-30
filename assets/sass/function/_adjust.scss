@@ -1,0 +1,401 @@
+@charset "utf-8";
+@use "mixin" as *;
+
+// text align
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.center_left {
+	text-align: center;
+	@include mq() {
+		text-align: left;
+	}
+}
+
+.left_center {
+	text-align: left;
+	@include mq() {
+		text-align: center;
+	}
+}
+
+// margin
+.mt_10{margin-top:10px;}
+.mt_20{margin-top:20px;}
+.mt_30{margin-top:30px;}
+.mt_50{margin-top:50px;}
+.mt_100{margin-top:100px;}
+
+@include mq() {
+	.mt_20{margin-top:15px;}
+	.mt_30{margin-top:20px;}
+	.mt_50{margin-top:30px;}
+	.mt_100{margin-top:50px;}
+}
+
+@include mq(sp) {
+	.mt_20{margin-top:15px;}
+	.mt_50{margin-top:25px;}
+}
+
+
+.mb_10{margin-bottom:10px;}
+.mb_20{margin-bottom:20px;}
+.mb_30{margin-bottom:30px;}
+.mb_50{margin-bottom:50px;}
+.mb_100{margin-bottom:100px;}
+
+@include mq() {
+	.mb_20{margin-bottom:15px;}
+	.mb_30{margin-bottom:20px;}
+	.mb_50{margin-bottom:30px;}
+	.mb_100{margin-bottom:50px;}
+}
+
+@include mq(sp) {
+	.mb_20{margin-bottom:15px;}
+	.mb_50{margin-bottom:25px;}
+}
+
+
+.mr_05{margin-right:5px;}
+.mr_10{margin-right:10px;}
+.mr_15{margin-right:15px;}
+.mr_20{margin-right:20px;}
+.mr_30{margin-right:30px;}
+
+.ml_05{margin-left:5px;}
+.ml_10{margin-left:10px;}
+.ml_15{margin-left:15px;}
+.ml_20{margin-left:20px;}
+.ml_30{margin-left:30px;}
+
+
+
+// font size
+.font_size_30 {
+	font-size: 30px;
+
+	@include mq() {
+		font-size: 26px;
+	}
+
+	@include mq(sp) {
+		font-size: 24px;
+	}
+}
+
+
+.font_size_26 {
+	font-size: 26px;
+
+	@include mq() {
+		font-size: 24px;
+	}
+
+	@include mq(sp) {
+		font-size: 22px;
+	}
+}
+
+.font_size_24 {
+	font-size: 24px;
+
+	@include mq() {
+		font-size: 22px;
+	}
+
+	@include mq(sp) {
+		font-size: 20px;
+	}
+}
+
+
+.font_size_22 {
+	font-size: 22px;
+
+	@include mq() {
+		font-size: 20px;
+	}
+
+	@include mq(sp) {
+		font-size: 18px;
+	}
+}
+
+.font_size_20 {
+	font-size: 20px;
+
+	@include mq() {
+		font-size: 18px;
+	}
+
+	@include mq(sp) {
+		font-size: 16px;
+	}
+}
+
+.font_size_18 {
+	font-size: 18px;
+
+	@include mq() {
+		font-size: 17px;
+	}
+
+	@include mq(sp) {
+		font-size: 15px;
+	}
+}
+
+.font_size_16 {
+	font-size: 16px;
+
+	@include mq() {
+		font-size: 15px;
+	}
+
+	@include mq(sp) {
+		font-size: 14px;
+	}
+}
+
+
+.font_size_14 {
+	font-size: 14px;
+
+	@include mq() {
+		font-size: 13px;
+	}
+
+	@include mq(sp) {
+		font-size: 12px;
+	}
+}
+
+
+.font_size_12 {
+	font-size: 12px;
+
+	@include mq() {
+		font-size: 12px;
+	}
+
+	@include mq(sp) {
+		font-size: 11px;
+	}
+}
+
+
+.font_size_10 {
+	font-size: 10px;
+
+	@include mq() {
+		font-size: 10px;
+	}
+
+	@include mq(sp) {
+		font-size: 10px;
+	}
+}
+
+
+// 細字
+.normal {
+	font-weight: normal;
+}
+
+// 太字
+.bold {
+	font-weight: bold;
+}
+
+// 角丸
+.corners {
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+// 表示/非表示の調整クラス
+.hide_sp {
+	@include mq() {
+		display: none;
+	}
+}
+
+.hide_pc {
+	@include mq_up() {
+		display: none;
+	}
+}
+
+.hide_less_pc {
+	@include mq(pc) {
+		display: none;
+	}
+}
+
+.hide_more_pc {
+	@include mq_up(pc) {
+		display: none;
+	}
+}
+
+.hide_less_spc {
+	@include mq(spc) {
+		display: none;
+	}
+}
+
+.hide_more_spc {
+	@include mq_up(spc) {
+		display: none;
+	}
+}
+
+.hide_less_sp {
+	@include mq(sp) {
+		display: none;
+	}
+}
+
+.hide_more_sp {
+	@include mq_up(sp) {
+		display: none;
+	}
+}
+
+.hide_less_ssp {
+	@include mq(ssp) {
+		display: none;
+	}
+}
+
+.hide_more_ssp {
+	@include mq_up(ssp) {
+		display: none;
+	}
+}
+
+.hide_less_sssp {
+	@include mq(sssp) {
+		display: none;
+	}
+}
+
+.hide_more_sssp {
+	@include mq_up(sssp) {
+		display: none;
+	}
+}
+
+// 非表示
+.display_none {
+	display: none;
+}
+
+
+// 電話番号など、PCではリンクさせず、SPだけクリッカブルにする
+.sp_link {
+	pointer-events: none;
+	@include mq() {
+		pointer-events: inherit;
+	}
+}
+
+// 画像
+.wth_100 {
+	width: 100%;
+	height: auto;
+}
+
+// ボックス
+.position_relative {
+	position: relative;
+}
+.overflow_hidden {
+	overflow: hidden;
+}
+
+// 選択不可
+.unselectable {
+	-ms-user-select: none; /* IE 10+ */
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+// ------------ PARTS STYLE ------------
+
+// clearfix
+%clearfix {
+	zoom:1;
+	&:after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+
+
+// ブロック要素のリンク
+%a_block {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+
+// リンクエフェクト
+.transitions {
+	transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+
+	@include mq() {
+		transition: all 0s ease;
+		-webkit-transition: all 0s ease;
+		-moz-transition: all 0s ease;
+		-o-transition: all 0s ease;
+	}
+}
+
+// モーションエフェクト
+.all_transitions {
+	transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+}
+// 上下中央に配置
+.vertical {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translate(0%, -50%);
+	transform: translate(0%, -50%);
+}
+
+//高さ指定して中心でトリミング
+.obj_image {
+	object-fit: cover;
+	font-family: 'object-fit: cover;'
+}
+
+
+//コンテンツ幅
+%content-width{
+	width: 95%;
+	margin: auto;
+	position: relative;
+}

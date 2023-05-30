@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>お問い合わせ</title>
+
+    <!-- 下層は記述を省略しています -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!--[if IE 7 ]> <html class="ie7"> <![endif]-->
+    <!--[if IE 8 ]> <html class="ie8"> <![endif]-->
+    <!--[if IE 9 ]> <html class="ie9"> <![endif]-->
+
+    <!-- GLOBAL IMPORT -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js" defer></script>
+    <script src="../assets/js/min/effect.min.js" defer></script>
+    <script src="../assets/js/min/scrollEffect.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+
+    <!-- LOCAL IMPORT -->
+
+</head>
+
+<body>
+
+    <!-- //// ALL START //// -->
+
+    <div id="container" class="article form">
+
+
+        <!-- //// HEADER START //// -->
+
+        <header class="header">
+
+            <div class="header-inner g-p-wrapper">
+
+                <!-- 会社名ロゴ -->
+                <h1 class="header-logo">
+				<a href="../">
+					<img src="../assets/img/common/logo.svg" alt="会社名">
+				</a>
+			</h1>
+
+                <!-- ハンバーガーボタン -->
+                <div class="header-toggle-btn" id="toggle">
+                    <span class="header-toggle-btn-bar top"></span>
+                    <span class="header-toggle-btn-bar middle"></span>
+                    <span class="header-toggle-btn-bar bottom"></span>
+                </div>
+
+                <!-- ナビゲーション -->
+                <div class="drawer_bg" id="drawer_layer"></div>
+                <nav class="header-nav">
+                    <ul class="header-nav-list">
+                        <li class="header-nav-list-item switching">
+                            <a href="#"><img src="../assets/img/common/logo.svg" alt="会社名"></a>
+                        </li>
+                        <li class="header-nav-list-item"><a href="#faq" class="active">Nav1</a></li>
+                        <li class="header-nav-list-item header-nav-list-item--parent">
+                            <a href="#">Nav2</a>
+                            <ul class="header-nav-list-sub">
+                                <li><a href="#">Sab1</a></li>
+                                <li><a href="#">Sab2</a></li>
+                                <li><a href="#">Sab3</a></li>
+                                <li><a href="#">Sab4</a></li>
+                            </ul>
+                        </li>
+                        <li class="header-nav-list-item"><a href="#">Nav3</a></li>
+                        <li class="header-nav-list-item"><a href="../news/">お知らせ</a></li>
+                        <li class="header-nav-list-item"><a href="../blog/">ブログ</a></li>
+                        <li class="header-nav-list-item switching">
+                            <ul>
+                                <li><a href="#">プライバシーポリシー</a></li>
+                                <li><a href="../contact/">お問い合わせ</a></li>
+                                <li><a href="#">会社概要</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- CVボタン -->
+                <div class="header-cv">
+                    <a href="../contact/"><span>お問い合わせ</span></a>
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- //// HEADER END //// -->
+
+
+        <!-- //// PAGE TITLE START //// -->
+
+        <div class="g-p-page_ttl">
+
+            <h1>お問い合わせ</h1>
+
+        </div>
+
+        <!-- //// PAGE TITLE END //// -->
+
+        <div class="g-p-column_1">
+
+            <!-- //// MAIN CONTENT START //// -->
+
+            <main role="main">
+
+                <!-- CONTENTS START -->
+                <section class="g-p-sec">
+
+                    <div class="g-p-wrapper">
+
+                        <div class="flow_nav">
+                            <ul class="flow_form">
+                                <li><span>1 入力</span></li>
+                                <li><span>2 確認</span></li>
+                                <li><span>3 完了</span></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="eqn5_form">
+
+                            <p class="head"><span class="essential">必須</span>は必須項目です。弊社へお問い合わせいただく方は、<a href="../privacy-policy.html" target="_blank">個人情報の取り扱いについて</a>を必ずお読みください。</p>
+
+                            <span id="form_top"></span>
+                            <form action="./confirm.html" method="post" autocomplete="off" enctype="multipart/form-data">
+                                <table>
+                                    <tbody>
+
+                                        <tr>
+                                            <th>
+                                                <p>お名前</p>
+                                                <span class="essential">必須</span>
+                                            </th>
+                                            <td>
+
+                                                <input class="eqn5_name" name="column_input[0][0]" value="" placeholder="お名前" data-eqn5-id='0_0' data-eqn5-label='お名前' required>
+
+                                                <div id="eqn5_error_0_0" class="err_area"></div>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <p>ふりがな</p>
+                                                <span class="essential">必須</span>
+                                            </th>
+                                            <td>
+
+                                                <input class="eqn5_kana" name="column_input[0][1]" value="" placeholder="ふりがな" data-eqn5-id='0_1' data-eqn5-label='ふりがな' required>
+
+                                                <div id="eqn5_error_0_1" class="err_area"></div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>
+                                                <p>参考</p>
+
+                                            </th>
+                                            <td>
+                                                <span class="arrow_forward">前に入れられる</span>
+                                                <input class="eqn5_input wth_50" name="column_input[1]" value="" placeholder="CSSクラスも付与できます。" data-eqn5-id='1' data-eqn5-label='参考'>
+                                                <span class="arrow_behind">後に入れられる</span>
+                                                <div id="eqn5_error_1" class="err_area"></div>
+                                                <p class="annot">注釈はここ</p>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>
+                                                <p>メールアドレス</p>
+                                                <span class="essential">必須</span>
+                                            </th>
+                                            <td>
+
+                                                <input class="eqn5_mail" type="email" name="column_input[2]" value="" placeholder="ooo@oooo.mail" data-eqn5-id='2' data-eqn5-label='メールアドレス' required>
+
+                                                <div id="eqn5_error_2" class="err_area"></div>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>
+                                                <p>電話番号</p>
+
+                                            </th>
+                                            <td>
+
+                                                <input class="eqn5_tel" type="tel" name="column_input[3]" value="" placeholder="" data-eqn5-id='3' data-eqn5-label='電話番号'>
+
+                                                <div id="eqn5_error_3" class="err_area"></div>
+                                                <p class="annot">※日中ご連絡の取れる電話番号を記入してください。（例文）</p>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>
+                                                <p>セレクトボックス</p>
+                                                <span class="essential">必須</span>
+                                            </th>
+                                            <td>
+
+                                                <select class="eqn5_input" name="column_input[4]" data-eqn5-id='4' data-eqn5-label='セレクトボックス' required>
+                                                    <option value="">選択してください</option>
+                                                    <option value="チーズ">チーズ</option>
+                                                    <option value="ジャム">ジャム</option>
+                                                    <option value="バター">バター</option>
+                                                </select>
+
+                                                <div id="eqn5_error_4" class="err_area"></div>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>
+                                                <p>ラジオボタン</p>
+                                                <span class="essential">必須</span>
+                                            </th>
+                                            <td>
+                                                <ul class="eqn5_list check_list" data-eqn5-id='5' data-eqn5-label='ラジオボタン' data-eqn5-option='{"required":"1"}'>
+                                                    <li>
+                                                        <input class="eqn5_list_child" type="radio" name="column_input[5]" id="radio_5_0" value="イチゴ"><label for="radio_5_0">イチゴ</label>
+                                                    </li>
+                                                    <li>
+                                                        <input class="eqn5_list_child" type="radio" name="column_input[5]" id="radio_5_1" value="リンゴ"><label for="radio_5_1">リンゴ</label>
+                                                    </li>
+                                                    <li>
+                                                        <input class="eqn5_list_child" type="radio" name="column_input[5]" id="radio_5_2" value="パイナップル"><label for="radio_5_2">パイナップル</label>
+                                                    </li>
+                                                </ul>
+                                                <div id="eqn5_error_5" class="err_area"></div>
+                                                <p class="annot">※いずれかを選択してください（例文）</p>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>
+                                                <p>チェックボックス</p>
+                                                <span class="essential">必須</span>
+                                            </th>
+                                            <td>
+                                                <ul class="eqn5_list check_list" data-eqn5-id='6' data-eqn5-label='チェックボックス' data-eqn5-option='{"required":"1"}'>
+                                                    <li>
+                                                        <input type="hidden" name="column_input[6][0]" value="">
+                                                        <input class="eqn5_list_child" type="checkbox" name="column_input[6][0]" id="checkbox_6_0" value="生クリーム">
+                                                        <label for="checkbox_6_0">生クリーム</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="hidden" name="column_input[6][1]" value="">
+                                                        <input class="eqn5_list_child" type="checkbox" name="column_input[6][1]" id="checkbox_6_1" value="アイス">
+                                                        <label for="checkbox_6_1">アイス</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="hidden" name="column_input[6][2]" value="">
+                                                        <input class="eqn5_list_child" type="checkbox" name="column_input[6][2]" id="checkbox_6_2" value="チョコレート">
+                                                        <label for="checkbox_6_2">チョコレート</label>
+                                                    </li>
+                                                </ul>
+                                                <div id="eqn5_error_6" class="err_area"></div>
+                                                <p class="annot">※いずれかを選択してください（例文）</p>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>
+                                                <p>住所</p>
+                                                <span class="essential">必須</span>
+                                            </th>
+                                            <td>
+                                                <div class="h-adr">
+                                                    <span class="p-country-name" style="display:none;">Japan</span>
+                                                    <p><span class="arrow">郵便番号</span></p>
+                                                    <div class="eqn5_group" data-eqn5-id='7' data-eqn5-label='郵便番号' data-eqn5-option='{"required":"1", "type":"postalcode", "msg":"郵便番号を入力してください。"}'>
+                                                        <ul class="number">
+                                                            <li>
+                                                                <input class="eqn5_digit eqn5_group_child p-postal-code" type="text" name="column_input[7][0]" value="" placeholder="000" maxlength="3" required>
+                                                                <span>-</span>
+                                                            </li>
+                                                            <li>
+                                                                <input class="eqn5_digit eqn5_group_child p-postal-code" type="text" name="column_input[7][1]" value="" placeholder="0000" maxlength="4" required>
+                                                            </li>
+                                                        </ul>
+                                                        <div id="eqn5_error_7" class="err_area"></div>
+                                                    </div>
+                                                    <div>
+                                                        <p><span class="arrow">都道府県</span></p>
+                                                        <select class="eqn5_input selectBox200 p-region" name="column_input[7][2]" data-eqn5-id='7_2' data-eqn5-label='都道府県' required>
+                                                            <option value="">--</option>
+                                                            <optgroup label="北海道・東北地方">
+                                                                <option value="北海道">北海道</option>
+                                                                <option value="青森県">青森県</option>
+                                                                <option value="岩手県">岩手県</option>
+                                                                <option value="秋田県">秋田県</option>
+                                                                <option value="宮城県">宮城県</option>
+                                                                <option value="山形県">山形県</option>
+                                                                <option value="福島県">福島県</option>
+                                                            </optgroup>
+                                                            <optgroup label="関東地方">
+                                                                <option value="東京都">東京都</option>
+                                                                <option value="神奈川県">神奈川県</option>
+                                                                <option value="埼玉県">埼玉県</option>
+                                                                <option value="千葉県">千葉県</option>
+                                                                <option value="茨城県">茨城県</option>
+                                                                <option value="栃木県">栃木県</option>
+                                                                <option value="群馬県">群馬県</option>
+                                                            </optgroup>
+                                                            <optgroup label="甲信越地方">
+                                                                <option value="山梨県">山梨県</option>
+                                                                <option value="長野県">長野県</option>
+                                                                <option value="新潟県">新潟県</option>
+                                                            </optgroup>
+                                                            <optgroup label="東海地方">
+                                                                <option value="静岡県">静岡県</option>
+                                                                <option value="愛知県">愛知県</option>
+                                                                <option value="岐阜県">岐阜県</option>
+                                                                <option value="三重県">三重県</option>
+                                                            </optgroup>
+                                                            <optgroup label="北陸地方">
+                                                                <option value="富山県">富山県</option>
+                                                                <option value="石川県">石川県</option>
+                                                                <option value="福井県">福井県</option>
+                                                            </optgroup>
+                                                            <optgroup label="近畿地方">
+                                                                <option value="大阪府">大阪府</option>
+                                                                <option value="京都府">京都府</option>
+                                                                <option value="奈良県">奈良県</option>
+                                                                <option value="滋賀県">滋賀県</option>
+                                                                <option value="和歌山県">和歌山県</option>
+                                                                <option value="兵庫県">兵庫県</option>
+                                                            </optgroup>
+                                                            <optgroup label="中国地方">
+                                                                <option value="岡山県">岡山県</option>
+                                                                <option value="広島県">広島県</option>
+                                                                <option value="鳥取県">鳥取県</option>
+                                                                <option value="島根県">島根県</option>
+                                                                <option value="山口県">山口県</option>
+                                                            </optgroup>
+                                                            <optgroup label="四国地方">
+                                                                <option value="香川県">香川県</option>
+                                                                <option value="徳島県">徳島県</option>
+                                                                <option value="愛媛県">愛媛県</option>
+                                                                <option value="高知県">高知県</option>
+                                                            </optgroup>
+                                                            <optgroup label="九州・沖縄地方">
+                                                                <option value="福岡県">福岡県</option>
+                                                                <option value="佐賀県">佐賀県</option>
+                                                                <option value="長崎県">長崎県</option>
+                                                                <option value="大分県">大分県</option>
+                                                                <option value="熊本県">熊本県</option>
+                                                                <option value="宮崎県">宮崎県</option>
+                                                                <option value="鹿児島県">鹿児島県</option>
+                                                                <option value="沖縄県">沖縄県</option>
+                                                            </optgroup>
+                                                        </select>
+                                                        <div id="eqn5_error_7_2" class="err_area"></div>
+                                                    </div>
+                                                    <div>
+                                                        <p><span class="arrow">市区町村</span></p>
+                                                        <input class="eqn5_input p-locality p-street-address p-extended-address" type="text" name="column_input[7][3]" value="" placeholder="〇〇区〇〇町" data-eqn5-id='7_3' data-eqn5-label='市区町村' required>
+                                                        <div id="eqn5_error_7_3" class="err_area"></div>
+                                                    </div>
+
+                                                    <div>
+                                                        <p><span class="arrow">以降の住所</span></p>
+                                                        <input class="eqn5_nocontrol" type="text" name="column_input[7][4]" value="">
+                                                    </div>
+
+
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>
+                                                <p>予約日</p>
+
+                                            </th>
+                                            <td>
+
+                                                <input class="eqn5_datepicker" tyep="text" name="column_input[8]" value="" placeholder="" data-eqn5-id='8' data-eqn5-label='予約日'>
+
+                                                <div id="eqn5_error_8" class="err_area"></div>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>
+                                                <p>生年月日</p>
+
+                                            </th>
+                                            <td class="eqn5_group" data-eqn5-id='9' data-eqn5-label='生年月日' data-eqn5-option='{"type":"date"}'>
+                                                <select class="eqn5_group_child" name="column_input[9][0]">
+                                                    <option value="">--</option>
+                                                    <option value="2021">2021</option>
+                                                    <option value="2020">2020</option>
+                                                    <option value="2019">2019</option>
+                                                    <option value="2018">2018</option>
+                                                    <option value="2017">2017</option>
+                                                    <option value="2016">2016</option>
+                                                    <option value="2015">2015</option>
+                                                    <option value="2014">2014</option>
+                                                    <option value="2013">2013</option>
+                                                    <option value="2012">2012</option>
+                                                    <option value="2011">2011</option>
+                                                    <option value="2010">2010</option>
+                                                    <option value="2009">2009</option>
+                                                    <option value="2008">2008</option>
+                                                    <option value="2007">2007</option>
+                                                    <option value="2006">2006</option>
+                                                    <option value="2005">2005</option>
+                                                    <option value="2004">2004</option>
+                                                    <option value="2003">2003</option>
+                                                    <option value="2002">2002</option>
+                                                    <option value="2001">2001</option>
+                                                    <option value="2000">2000</option>
+                                                    <option value="1999">1999</option>
+                                                    <option value="1998">1998</option>
+                                                    <option value="1997">1997</option>
+                                                    <option value="1996">1996</option>
+                                                    <option value="1995">1995</option>
+                                                    <option value="1994">1994</option>
+                                                    <option value="1993">1993</option>
+                                                    <option value="1992">1992</option>
+                                                    <option value="1991">1991</option>
+                                                    <option value="1990">1990</option>
+                                                    <option value="1989">1989</option>
+                                                    <option value="1988">1988</option>
+                                                    <option value="1987">1987</option>
+                                                    <option value="1986">1986</option>
+                                                    <option value="1985">1985</option>
+                                                    <option value="1984">1984</option>
+                                                    <option value="1983">1983</option>
+                                                    <option value="1982">1982</option>
+                                                    <option value="1981">1981</option>
+                                                    <option value="1980">1980</option>
+                                                    <option value="1979">1979</option>
+                                                    <option value="1978">1978</option>
+                                                    <option value="1977">1977</option>
+                                                    <option value="1976">1976</option>
+                                                    <option value="1975">1975</option>
+                                                    <option value="1974">1974</option>
+                                                    <option value="1973">1973</option>
+                                                    <option value="1972">1972</option>
+                                                    <option value="1971">1971</option>
+                                                    <option value="1970">1970</option>
+                                                    <option value="1969">1969</option>
+                                                    <option value="1968">1968</option>
+                                                    <option value="1967">1967</option>
+                                                    <option value="1966">1966</option>
+                                                    <option value="1965">1965</option>
+                                                    <option value="1964">1964</option>
+                                                    <option value="1963">1963</option>
+                                                    <option value="1962">1962</option>
+                                                    <option value="1961">1961</option>
+                                                    <option value="1960">1960</option>
+                                                    <option value="1959">1959</option>
+                                                    <option value="1958">1958</option>
+                                                    <option value="1957">1957</option>
+                                                    <option value="1956">1956</option>
+                                                    <option value="1955">1955</option>
+                                                    <option value="1954">1954</option>
+                                                    <option value="1953">1953</option>
+                                                    <option value="1952">1952</option>
+                                                    <option value="1951">1951</option>
+                                                    <option value="1950">1950</option>
+                                                    <option value="1949">1949</option>
+                                                    <option value="1948">1948</option>
+                                                    <option value="1947">1947</option>
+                                                    <option value="1946">1946</option>
+                                                    <option value="1945">1945</option>
+                                                    <option value="1944">1944</option>
+                                                    <option value="1943">1943</option>
+                                                    <option value="1942">1942</option>
+                                                    <option value="1941">1941</option>
+                                                    <option value="1940">1940</option>
+                                                    <option value="1939">1939</option>
+                                                    <option value="1938">1938</option>
+                                                    <option value="1937">1937</option>
+                                                    <option value="1936">1936</option>
+                                                    <option value="1935">1935</option>
+                                                    <option value="1934">1934</option>
+                                                    <option value="1933">1933</option>
+                                                    <option value="1932">1932</option>
+                                                    <option value="1931">1931</option>
+                                                    <option value="1930">1930</option>
+                                                    <option value="1929">1929</option>
+                                                    <option value="1928">1928</option>
+                                                    <option value="1927">1927</option>
+                                                    <option value="1926">1926</option>
+                                                    <option value="1925">1925</option>
+                                                    <option value="1924">1924</option>
+                                                    <option value="1923">1923</option>
+                                                    <option value="1922">1922</option>
+                                                    <option value="1921">1921</option>
+                                                    <option value="1920">1920</option>
+                                                </select>
+                                                <span>年</span>
+                                                <select class="eqn5_group_child" name="column_input[9][1]">
+                                                    <option value="">--</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
+                                                <span>月</span>
+                                                <select class="eqn5_group_child" name="column_input[9][2]">
+                                                    <option value="">--</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+                                                </select>
+                                                <span>日</span>
+                                                <div id="eqn5_error_9" class="err_area"></div>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>
+                                                <p>ファイル<br>(容量：3MBまで)</p>
+
+                                            </th>
+                                            <td>
+                                                <input class="eqn5_file" type="file" name="column_input[10]" data-eqn5-id='10' data-eqn5-label='ファイル'>
+                                                <div id="eqn5_error_10" class="err_area"></div>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>
+                                                <p>備考</p>
+
+                                            </th>
+                                            <td>
+
+                                                <textarea class="eqn5_input" name="column_input[11]" placeholder="" data-eqn5-id='11' data-eqn5-label='備考'></textarea>
+
+                                                <div id="eqn5_error_11" class="err_area"></div>
+
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                                <div class="agree_box">
+
+                                    <div class="policy_box">
+                                        <div class="policy_content">
+                                            <h2>個人情報の取り扱いについて</h2>
+                                            <p>株式会社イッパイアッテナ(以下、「当社」といいます。)は、本ウェブサイト上で提供するサービス(以下、「本サービス」といいます。)におけるユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシー(以下、「本ポリシー」といいます。)を定めます。</p>
+
+                                            <h3>■第1条(個人情報)</h3>
+                                            <p>「個人情報」とは、個人情報保護法にいう「個人情報」を指すものとし、生存する個人に関する情報であって、当該情報に含まれる氏名・生年月日・住所・電話番号・連絡先その他の記述等により特定の個人を識別できる情報及び容貌・指紋・声紋にかかるデータ、及び健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報(個人識別情報)を指します。</p>
+
+                                            <h3>■第2条(個人情報の収集方法)</h3>
+                                            <p>当社は、ユーザーが利用登録をする際に氏名・生年月日・住所・電話番号・メールアドレス・銀行口座番号・クレジットカード番号・運転免許証番号などの個人情報をお尋ねすることがあります。また、ユーザーと提携先などとの間でなされたユーザーの個人情報を含む取引記録や決済に関する情報を、当社の提携先(情報提供元・広告主・広告配信先などを含みます。以下、｢提携先｣といいます。)などから収集することがあります。</p>
+
+                                            <h3>■第3条(個人情報を収集・利用する目的)</h3>
+                                            <p class="mb_0">当社が個人情報を収集・利用する目的は、以下のとおりです。</p>
+                                            <ol class="pl_25">
+                                                <li>当社サービスの提供・運営のため</li>
+                                                <li>ユーザーからのお問い合わせに回答するため(本人確認を行うことを含む)</li>
+                                                <li>ユーザーが利用中のサービスの新機能・更新情報・キャンペーン等及び当社が提供する他のサービスの案内のメールを送付するため</li>
+                                                <li>メンテナンス・重要なお知らせなど必要に応じたご連絡のため</li>
+                                                <li>利用規約に違反したユーザーや、不正・不当な目的でサービスを利用しようとするユーザーの特定をし、ご利用をお断りするため</li>
+                                                <li>ユーザーにご自身の登録情報の閲覧や変更・削除・ご利用状況の閲覧を行っていただくため</li>
+                                                <li>有料サービスにおいて、ユーザーに利用料金を請求するため</li>
+                                                <li>上記の利用目的に付随する目的</li>
+                                            </ol>
+
+                                            <h3>■第4条(利用目的の変更)</h3>
+                                            <ol>
+                                                <li>当社は、利用目的が変更前と関連性を有すると合理的に認められる場合に限り、個人情報の利用目的を変更するものとします。</li>
+                                                <li>利用目的の変更を行った場合には、変更後の目的について、当社所定の方法により、ユーザーに通知し、または本ウェブサイト上に公表するものとします。</li>
+                                            </ol>
+
+                                            <h3>■第5条(登録ユーザー向けサービスの変更等）</h3>
+                                            <ol>
+                                                <li>当社は、次に掲げる場合を除いて、あらかじめユーザーの同意を得ることなく、第三者に個人情報を提供することはありません。ただし、個人情報保護法その他の法令で認められる場合を除きます。
+                                                    <ol>
+                                                        <li>人の生命、身体または財産の保護のために必要がある場合であって、本人の同意を得ることが困難であるとき</li>
+                                                        <li>公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって、本人の同意を得ることが困難であるとき</li>
+                                                        <li>国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき</li>
+                                                        <li>予め次の事項を告知あるいは公表し，かつ当社が個人情報保護委員会に届出をしたとき
+                                                            <ol>
+                                                                <li>利用目的に第三者への提供を含むこと</li>
+                                                                <li>第三者に提供されるデータの項目</li>
+                                                                <li>第三者への提供の手段または方法</li>
+                                                                <li>本人の求めに応じて個人情報の第三者への提供を停止すること</li>
+                                                                <li>本人の求めを受け付ける方法</li>
+                                                            </ol>
+                                                        </li>
+                                                    </ol>
+                                                </li>
+                                                <li>前項の定めにかかわらず、次に掲げる場合には、当該情報の提供先は第三者に該当しないものとします。
+                                                    <ol>
+                                                        <li>当社が利用目的の達成に必要な範囲内において個人情報の取扱いの全部または一部を委託する場合</li>
+                                                        <li>合併その他の事由による事業の承継に伴って個人情報が提供される場合</li>
+                                                        <li>個人情報を特定の者との間で共同して利用する場合であって、その旨並びに共同して利用される個人情報の項目、共同して利用する者の範囲、利用する者の利用目的および当該個人情報の管理について責任を有する者の氏名または名称について、あらかじめ本人に通知し、または本人が容易に知り得る状態に置いた場合</li>
+                                                    </ol>
+                                                </li>
+                                            </ol>
+
+                                            <h3>■第6条(個人情報の開示)</h3>
+                                            <ol>
+                                                <li>当社は、本人から個人情報の開示を求められたときは、本人に対し、遅滞なくこれを開示します。ただし、開示することにより次のいずれかに該当する場合は、その全部または一部を開示しないこともあり、開示しない決定をした場合には、その旨を遅滞なく通知します。なお、個人情報の開示に際しては、1件あたり1,000円の手数料を申し受けます。
+                                                    <ol>
+                                                        <li>本人または第三者の生命、身体、財産その他の権利利益を害するおそれがある場合</li>
+                                                        <li>当社の業務の適正な実施に著しい支障を及ぼすおそれがある場合</li>
+                                                        <li>その他法令に違反することとなる場合</li>
+                                                    </ol>
+                                                </li>
+                                                <li>前項の定めにかかわらず、履歴情報および特性情報などの個人情報以外の情報については、原則として開示いたしません。</li>
+                                            </ol>
+
+                                            <h3>■第7条(個人情報の訂正および削除)</h3>
+                                            <ol>
+                                                <li>ユーザーは、当社の保有する自己の個人情報が誤った情報である場合には、当社が定める手続きにより、当社に対して個人情報の訂正、追加または削除(以下、「訂正等」といいます。)を請求することができます。</li>
+                                                <li>当社は、ユーザーから前項の請求を受けてその請求に応じる必要があると判断した場合には、遅滞なく、当該個人情報の訂正等を行うものとします。</li>
+                                                <li>当社は、前項の規定に基づき訂正等を行った場合、または訂正等を行わない旨の決定をしたときは遅滞なく、これをユーザーに通知します。</li>
+                                            </ol>
+
+                                            <h3>■第8条（個人情報の利用停止等）</h3>
+                                            <ol>
+                                                <li>当社は、本人から、個人情報が、利用目的の範囲を超えて取り扱われているという理由、または不正の手段により取得されたものであるという理由により、その利用の停止または消去(以下、「利用停止等」といいます。)を求められた場合には、遅滞なく必要な調査を行います。</li>
+                                                <li>前項の調査結果に基づき、その請求に応じる必要があると判断した場合には、遅滞なく、当該個人情報の利用停止等を行います。</li>
+                                                <li>当社は、前項の規定に基づき利用停止等を行った場合、または利用停止等を行わない旨の決定をしたときは、遅滞なく、これをユーザーに通知します。</li>
+                                                <li>前2項にかかわらず、利用停止等に多額の費用を有する場合その他利用停止等を行うことが困難な場合であって、ユーザーの権利利益を保護するために必要なこれに代わるべき措置をとれる場合は、この代替策を講じるものとします。</li>
+                                            </ol>
+
+                                            <h3>■第9条(プライバシーポリシーの変更)</h3>
+                                            <ol>
+                                                <li>本ポリシーの内容は、法令その他本ポリシーに別段の定めのある事項を除いて、ユーザーに通知することなく、変更することができるものとします。</li>
+                                                <li>当社が別途定める場合を除いて、変更後のプライバシーポリシーは、本ウェブサイトに掲載したときから効力を生じるものとします。</li>
+                                            </ol>
+
+                                            <h3>■第10条(お問い合わせ窓口)</h3>
+                                            <p class="mb_0">本ポリシーに関するお問い合わせは、お問い合わせよりお願いいたします。<br>
+                                            会社名：株式会社イッパイアッテナ<br>
+                                            info@example.co.jp
+                                        </p>
+
+                                        </div>
+                                    </div>
+
+                                    <p class="head_agree"><span class="essential">必須</span>個人情報の取り扱いについて</p>
+
+
+                                    <ul class="eqn5_list check_list" data-eqn5-id='12' data-eqn5-label='個人情報の取り扱いについて' data-eqn5-option='{"required":"1", "msg":"個人情報の取り扱いについてにチェックが必要です。"}'>
+                                        <li>
+                                            <input type="hidden" name="column_input[12][0]" value="">
+                                            <input class="eqn5_list_child" type="checkbox" name="column_input[12][0]" id="checkbox_12_0" value="同意する">
+                                            <label for="checkbox_12_0">同意する</label>
+                                        </li>
+                                    </ul>
+                                    <div id="eqn5_error_12" class="err_area"></div>
+
+
+
+                                </div>
+
+                                <ul class="transmission">
+                                    <li>
+                                        <button type="button" class="eqn5_wait_button button_confirm">未入力の項目があります</button>
+                                        <button type="submit" class="eqn5_send input_submit" style="display:none;">確認画面へ</button>
+                                    </li>
+                                </ul>
+                                <input type="hidden" name="form_id" value="contact">
+                                <input type="hidden" name="token" value="khrGUlwxudE92YBnWgmty1fCS830bF">
+                            </form>
+
+
+                            <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+                            <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+                            <script src="../../forms/app/vendor/eqn5-project-skeleton/forms/mail/js/min/jquery.autoKana.min.js" defer></script>
+                            <script src="../../forms/app/vendor/eqn5-project-skeleton/forms/mail/js/min/mailer.min.js" defer></script>
+                            <script src="https://yubinbango.github.io/yubinbango/yubinbango.js"></script>
+                            <script src="https://www.google.com/recaptcha/api.js"></script>
+
+                        </div>
+
+
+                        <p class="head">各要素サンプル</p>
+                        <!-- FORM START -->
+                        <form>
+
+                            <table>
+                                <tbody>
+
+                                    <!-- 各class -->
+                                    <tr>
+                                        <th>
+                                            <p>各classとパーツ</p>
+                                        </th>
+                                        <td>
+                                            <ul class="break">
+                                                <li>
+                                                    <p><span class="arrow">苗字</span></p><input type="text" name="苗字" placeholder="苗字を入力してください">
+                                                </li>
+                                                <li>
+                                                    <p><span class="arrow">名前</span></p><input type="text" name="名前" placeholder="名前を入力してください">
+                                                </li>
+                                            </ul>
+                                            <p><span class="arrow">記入例：毛玖珠 太郎</span></p>
+
+                                            <!-- 長さを変える -->
+                                            <p><span class="arrow">長さを変える</span></p>
+                                            <input type="text" name="苗字" placeholder="指定なし">
+                                            <input type="text" name="苗字" class="wth_80" placeholder="wth_80"><br>
+                                            <input type="text" name="苗字" class="wth_70" placeholder="wth_70"><br>
+                                            <input type="text" name="苗字" class="wth_50" placeholder="wth_50"><br>
+                                            <input type="text" name="苗字" class="wth_30" placeholder="wth_30"><br>
+
+                                            <!-- 途中でテキストが入る -->
+                                            <p><span class="arrow">途中でテキストが入る</span></p>
+                                            <ul class="variable">
+                                                <li><input type="text" name="メールアドレス"><span>が入ったカレーライス</span></li>
+                                            </ul>
+
+                                            <!-- 複数の項目を均等にわける -->
+                                            <p><span class="arrow">複数の項目を均等にわける</span></p>
+                                            <ul class="break">
+                                                <li><input type="text" placeholder="1項目"></li>
+                                                <li><input type="text" placeholder="2項目"></li>
+                                            </ul>
+
+                                            <ul class="break">
+                                                <li><input type="text" placeholder="1項目"></li>
+                                                <li><input type="text" placeholder="2項目"></li>
+                                                <li><input type="text" placeholder="3項目"></li>
+                                            </ul>
+
+
+                                            <ul class="phone">
+                                                <li><input type="tel" placeholder="0000"><span>-</span></li>
+                                                <li><input type="tel" placeholder="1234"><span>-</span></li>
+                                                <li><input type="tel" placeholder="1234"></li>
+                                            </ul>
+
+                                            <ul class="number">
+                                                <li><input type="text" name="" placeholder="000" maxlength="3"><span>-</span></li>
+                                                <li><input type="text" name="" placeholder="1234" maxlength="4"></li>
+                                            </ul>
+
+                                            <!-- パスワード -->
+                                            <p><span class="arrow">パスワードを入力してください。</span></p>
+                                            <input type="password" class="wth_30" placeholder="パスワード">
+
+                                            <!-- ラジオボタン -->
+                                            <p><span class="arrow">ラジオボタン</span></p>
+                                            <ul class="check_list">
+                                                <li>
+                                                    <input type="radio" name="d" id="d_1">
+                                                    <label for="d_1">ピンクグレープフルーツ</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="d" id="d_2">
+                                                    <label for="d_2">アスパラソバージュ</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="d" id="d_3">
+                                                    <label for="d_3">アイベリー</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="d" id="d_4">
+                                                    <label for="d_4">グリーンピース</label>
+                                                </li>
+                                            </ul>
+
+                                            <br>
+
+                                            <!-- チェックボックス -->
+                                            <p><span class="arrow">チェックボックス</span></p>
+                                            <ul class="check_list">
+                                                <li>
+                                                    <input type="hidden" name="chk[0]" value="">
+                                                    <input type="checkbox" name="chk[0]" id="chk_0" value="ピンクグレープフルーツ">
+                                                    <label for="chk_0">ピンクグレープフルーツ</label>
+                                                </li>
+                                                <li>
+                                                    <input type="hidden" name="chk[1]" value="">
+                                                    <input type="checkbox" name="chk[1]" id="chk_1" value="アスパラソバージュ">
+                                                    <label for="chk_1">アスパラソバージュ</label>
+                                                </li>
+                                                <li>
+                                                    <input type="hidden" name="chk[2]" value="">
+                                                    <input type="checkbox" name="chk[2]" id="chk_2" value="アイベリー">
+                                                    <label for="chk_2">アイベリー</label>
+                                                </li>
+                                                <li>
+                                                    <input type="hidden" name="chk[3]" value="">
+                                                    <input type="checkbox" name="chk[3]" id="chk_3" value="グリーンピース">
+                                                    <label for="chk_3">グリーンピース</label>
+                                                </li>
+                                                <li>
+                                                    <input type="hidden" name="chk[4]" value="">
+                                                    <input type="checkbox" name="chk[4]" id="chk_4" value="バレンシアオレンジ">
+                                                    <label for="chk_4">バレンシアオレンジ</label>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <p>繰り返し要素</p>
+                                        </th>
+                                        <td>
+                                            <!-- 要素が増えるエリア start -->
+                                            <!-- tableタグで要素をカウントしているのでtableタグで作ると良き -->
+                                            <!-- 戻るボタン対応もあり、繰り返し要素はJSではなくPHPに作らせます -->
+                                            <!-- コーディングデータでは全ての要素が詰まったHTMLがあれば大丈夫です -->
+                                            <div id="fgd_mutable_add_area">
+
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                <p><span class="arrow">繰り返し要素（仮）</span></p>
+                                                                <span class="essential">必須</span>
+                                                            </th>
+                                                            <td>
+                                                                <ul class="break">
+                                                                    <li>
+                                                                        <input class="fgd_hidden_suffix" type="hidden" value="1">
+                                                                        <input class="fgd_input" type="text" name="mutable_field_A_1" placeholder="1項目" required>
+
+                                                                    </li>
+                                                                    <li>
+                                                                        <input class="fgd_input" type="text" name="mutable_field_B_1" placeholder="2項目" required>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input class="fgd_input" type="text" name="mutable_field_C_1" placeholder="3項目" required>
+                                                                    </li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                            <!-- 要素が増えるエリア end -->
+
+                                            <!--個数変えるボタン-->
+                                            <div id="fgd_mutable_plus_area">
+                                                <button type="button" class="fgd_mutable_plus btn_add mt_10"><span>「繰り返し要素」を追加する</span></button>
+                                            </div>
+                                            <!-- 削除ボタン -->
+                                            <!-- <div id="fgd_mutable_minus_area">
+    <button type="button" class="fgd_mutable_remove btn_remove mt_10"><span>「繰り返し要素」を削除する</span></button>
+    </div> -->
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+
+                        </form>
+                        <!-- FORM END -->
+
+                    </div>
+
+                </section>
+                <!-- CONTENTS END -->
+
+            </main>
+
+            <!-- //// MAIN CONTENT END //// -->
+
+        </div>
+
+        <!-- パンくずリスト START -->
+        <div class="g-c-pan">
+
+            <div class="in g-p-wrapper">
+
+                <p id="breadcrumbs">
+                <span>
+                    <span>
+                        <a href="../" >TOP</a>
+                        <span>
+                            <a href="#" >第二階層</a>
+                            <span>
+                                <a href="#" >第三階層</a>
+                                <span class="breadcrumb_last" aria-current="page">ページタイトル</span>
+                            </span>
+                        </span>
+                    </span>
+                </span>
+            </p>
+
+            </div>
+
+        </div>
+        <!-- パンくずリスト END -->
+
+
+        <!-- //// FOOTER START //// -->
+        <footer class="footer">
+
+            <div class="g-p-wrapper">
+
+                <!-- 会社名ロゴ -->
+                <div class="footer-logo"><a href="./"><img src="./assets/img/common/logo.svg" alt="会社名"></a></div>
+
+
+                <!-- サイトマップ -->
+                <section class="footer-sitemap">
+
+                    <ul class="footer-sitemap-list">
+                        <li class="footer-sitemap-list-item"><a href="">コンテンツ1</a></li>
+                        <li class="footer-sitemap-list-item"><a href="">コンテンツ2</a></li>
+                        <li class="footer-sitemap-list-item"><a href="">コンテンツ3</a></li>
+                        <li class="footer-sitemap-list-item"><a href="">コンテンツ4</a></li>
+                        <li class="footer-sitemap-list-item"><a href="">コンテンツ5</a></li>
+                        <li class="footer-sitemap-list-item"><a href="">コンテンツ6</a></li>
+                        <li class="footer-sitemap-list-item"><a href="">コンテンツ7</a></li>
+                        <li class="footer-sitemap-list-item"><a href="">コンテンツ8</a></li>
+                    </ul>
+
+                </section>
+
+
+                <!-- ドキュメントリンク -->
+                <section class="copyright">
+
+                    <ul>
+                        <li><a href="./privacy-policy.html">プライバシーポリシー</a></li>
+                        <li><a href="">サイトマップ</a></li>
+                    </ul>
+
+                    <p>Copyright© crop Inc. All Rights Reserved.</p>
+
+                </section>
+            </div>
+
+        </footer>
+        <!-- //// FOOTER END //// -->
+
+
+        <!-- ページトップスクロール -->
+        <div id="pageup">
+            <a href="#top"><img src="../assets/img/arrow/pageup.svg" alt="ページトップ"></a>
+        </div>
+
+        <!-- CookiePolicy START -->
+        <div class="cookie-box display_none" id="cookiePolicy">
+            <div class="cookie-box_inner">
+                <p>
+                このウェブサイトではサイトの利便性の向上を目的にクッキーを使用します。ブラウザの設定によりクッキーの機能を変更することもできます。<br>詳細は<a href="./cookie-policy/">クッキーポリシーについて</a>をご覧ください。サイトを閲覧いただく際には、クッキーの使用に同意いただく必要があります。
+            </p>
+                <button type="button" class="cookie-box_btn" id="cookie_agree">同意する</button>
+            </div>
+        </div>
+        <!-- CookiePolicy END -->
+
+
+    </div>
+
+    <!-- //// ALL END //// -->
+
+
+    <div id="ie_container">
+        <div class="cover">
+            <p>ページを表示できません。<br>このサイトは、最新のブラウザでご覧ください。</p>
+        </div>
+    </div>
+
+</body>
+</html>

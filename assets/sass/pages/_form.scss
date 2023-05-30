@@ -1,0 +1,712 @@
+@charset "utf-8";
+@use "../function/index" as *;
+@use "../base/base" as b;
+
+// ------------ FORM ------------
+
+// フォーム
+div.form {
+
+	// ポップ
+	span.essential, span.optional {
+		white-space: nowrap;
+		padding: 3px 10px;
+		font-size: 80%;
+		color: #FFF;
+		background-color: $main-color;
+		font-weight: normal;
+		margin: 0 5px;
+		border-radius: 20px;
+	}
+
+	// 任意
+	span.optional {
+		background-color: $sub-color;
+		// 非表示の場合
+		// display: none;
+	}
+
+	section {
+
+		// table
+		table {
+			@include b.tb_block;
+
+			table {
+				width: 100%;
+			}
+
+			th,
+			td {
+				text-align: left;
+			}
+
+			th {
+				width: 25%;
+				background-color: $box;
+				border-bottom: #FFF 1px solid;
+				font-weight: bold;
+				position: relative;
+				vertical-align: top;
+				@include mq_up() {
+					padding: 30px 20px;
+				}
+
+				@include mq() {
+					width: 100%;
+					padding: 10px;
+					border: none;
+				}
+
+				p {
+					display: inline-block;
+					vertical-align: middle;
+					word-break: break-all;
+				}
+
+				span.essential, span.optional {
+					position: absolute;
+					right: 10px;
+				}
+			}
+
+			td {
+				padding: 15px 20px;
+				vertical-align: middle;
+				@include mq() {
+					padding: 10px 10px 20px 10px;
+				}
+			}
+
+			tr {
+				&:last-child th,
+				&:last-child td {
+					border-bottom: none;
+				}
+
+			}
+
+			// 確認画面用のtable
+			&.table_confirm {
+				th {
+					@include mq_up() {
+						padding: 15px 20px;
+					}
+				}
+			}
+		}
+
+	}
+
+
+	p {
+		// アナウンステキスト
+		&.head {
+			padding: 20px 0;
+			font-weight: bold;
+		}
+
+		&.closing {
+			padding: 20px 0 10px 0;
+			font-weight: bold;
+			text-align: center;
+		}
+	}
+
+	// 注釈
+	span.arrow {
+		font-size: 90%;
+		margin: 5px 0;
+		font-weight: bold;
+		display: inline-block;
+	}
+
+	// ボタンを並べる
+	ul.transmission {
+		width: auto;
+		text-align: center;
+		margin: 20px auto 50px auto;
+		display: table;
+
+		@include mq() {
+			margin-bottom: 30px;
+		}
+		@include mq(sp) {
+			width: 95%;
+			display: inherit;
+		}
+
+		li {
+			display: table-cell;
+			padding: 2px 5px;
+
+			@include mq(sp) {
+				display: block;
+			}
+
+			a {
+				cursor: pointer;	// href属性がないとポインタにならない
+			}
+
+		}
+	}
+
+	ul.transmission_confirm {
+		margin: 60px 0 50px;
+		@include mq() {
+			margin: 40px 0 30px;
+		}
+		li {
+			text-align: center;
+
+			& + li {
+				margin-top: 25px;
+				@include mq() {
+					margin-top: 15px;
+				}
+			}
+		}
+
+		form {
+			text-align: center;
+		}
+	}
+
+	// 項目を分割
+	ul.break {
+		width: 100%;
+		display: table;
+
+		@include mq(sp) {
+			display: inherit;
+		}
+
+		li {
+			display: table-cell;
+			padding: 0 5px;
+
+			&:nth-child(1) {
+				padding: 0 5px 0 0;
+
+				@include mq(sp) {
+					padding: 0;
+				}
+			}
+
+			&:last-child {
+				padding: 0 0 0 5px;
+
+				@include mq(sp) {
+					padding: 0;
+				}
+			}
+
+			@include mq(sp) {
+				display: inherit;
+				padding: 0;
+			}
+		}
+	}
+
+	// 項目を並べる
+	ul.variable {
+		width: 100%;
+
+		li {
+			display: inline-block;
+			padding: 0 5px;
+
+			&:last-child {
+				padding: 0 0 0 5px;
+
+				@include mq(sp) {
+					padding: 0;
+				}
+			}
+
+			&:nth-child(1) {
+				padding: 0 5px 0 0;
+
+				@include mq(sp) {
+					padding: 0;
+				}
+			}
+
+			@include mq(sp) {
+				display: inherit;
+				padding: 0;
+			}
+
+			input {
+				width: auto;
+				margin: 5px 10px 5px 0;
+			}
+		}
+	}
+
+	// チェックリストを並べる
+	ul.check_list {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+
+		li {
+			width: auto;
+			min-width: 25%;
+			padding: 5px 0;
+
+			@media only screen and (max-width:1000px){
+				width: 100%;
+				float: none;
+				border-bottom: $border-color 1px solid;
+			}
+		}
+	}
+
+	// 郵便番号
+	ul.number {
+		display: table;
+
+		li {
+			display: table-cell;
+
+			&:nth-child(1) {
+
+				input {
+					width: 5em;
+				}
+			}
+
+			&:nth-child(2) {
+				input {
+					width: 7em;
+				}
+			}
+
+			p {
+				display: inline-block;
+			}
+
+			span {
+				padding: 0 10px;
+			}
+		}
+	}
+
+
+	// 電話番号
+	ul.phone {
+		display: table;
+		table-layout: auto;
+
+		li {
+			display: table-cell;
+
+			&:nth-child(1) {
+
+				input {
+					width: 5em;
+				}
+			}
+
+			&:nth-child(2) {
+				input {
+					width: 6em;
+				}
+			}
+
+			&:nth-child(3) {
+				input {
+					width: 6em;
+				}
+			}
+
+			p {
+				display: inline-block;
+			}
+
+			span {
+				padding: 0 10px;
+			}
+		}
+	}
+
+	// 完了画面のアナウンス
+	div.comp_box {
+		padding: 50px 0;
+
+		@include mq(sp) {
+			padding: 30px 0;
+		}
+
+	}
+
+	// フローセクションバー
+	div.flow_nav {
+		max-width: 1000px;
+		margin: 50px auto 30px;
+		background-color: $box;
+
+		@include mq() {
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+
+		ul {
+			overflow: hidden;
+
+			li {
+				float: left;
+				position: relative;
+				width: 35%;
+				padding: 17px 0 17px 50px;
+				text-align: left;
+				background-color: $box;
+
+				@include mq() {
+					padding: 10px 0 10px 40px;
+				}
+				@include mq(sp) {
+					padding-left: 25px;
+				}
+
+				&:before {
+					bottom: 0;
+					content: "";
+					width: 45px;
+					height: 45px;
+					margin: auto;
+					position: absolute;
+					right: -20px;
+					top: 0;
+					-webkit-transform: rotate(-45deg);
+					-ms-transform: rotate(-45deg);
+					transform: rotate(-45deg);
+					background-color: $box;
+					z-index: 1;
+				}
+
+				&:first-child {
+					padding-left: 25px;
+					width: 30%;
+					@include mq() {
+						padding-left: 15px;
+					}
+					@include mq(sp) {
+						padding-left: 0;
+					}
+				}
+
+				&:last-child:before {
+					content: none;
+				}
+
+				span {
+					position:relative;
+					z-index:100;
+					padding: 0 0 0 15px;
+					font-size: 17px;
+					font-weight: bold;
+					@include mq(ssp) {
+						font-size: 14px;
+					}
+				}
+			}
+
+			&.flow_form {
+
+				li {
+
+					&:nth-child(1) {
+						background-color: $main-color;
+						color: #fff;
+						font-weight: bold;
+
+						&:before{
+							content: "";
+							margin: auto;
+							position: absolute;
+							right: -22px;
+							background-color: $main-color;
+							border-bottom: none;
+							border-right: none;
+						}
+					}
+
+					&:nth-child(2) {
+						&:before {
+							border-bottom: $border-color 1px solid;
+							border-right: $border-color 1px solid;
+						}
+					}
+				}
+			}
+
+			&.flow_confirm {
+
+				li {
+
+					&:nth-child(2) {
+						background-color: $main-color;
+						color: #fff;
+						font-weight: bold;
+
+						&:before{
+							content: "";
+							margin: auto;
+							position: absolute;
+							right: -22px;
+							background-color: $main-color;
+							border-bottom: none;
+							border-right: none;
+						}
+					}
+				}
+			}
+
+			&.flow_complete {
+
+				li {
+
+					&:nth-child(3) {
+						background-color: $main-color;
+						color: #fff;
+						font-weight: bold;
+
+						&:before{
+							content: "";
+							margin: auto;
+							position: absolute;
+							right: -22px;
+							background-color: $main-color;
+							border-bottom: none;
+							border-right: none;
+						}
+					}
+
+					&:nth-child(1) {
+						&:before {
+							border-bottom: $border-color 1px solid;
+							border-right: $border-color 1px solid;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// プライバシーポリシーに同意
+	div.agree_box {
+		margin: 0 auto;
+		text-align: center;
+		// padding: 30px auto;
+
+		@include mq_up() {
+			margin: 40px auto 0;
+			max-width: 900px;
+			width: 90%;
+		}
+
+		&,
+		p,
+		span,
+		li,
+		ul {
+			line-height: 1.5;
+		}
+
+		// @include mq() {
+		// 	margin: 0 auto;
+		// 	width: 100%;
+		// }
+
+		@include mq(sp) {
+			padding: 15px 5px 5px 5px;
+			margin-top: 0;
+		}
+
+		p.strong_text {
+			font-weight: 700;
+			@extend .font_size_18;
+			@include mq(ssp) {
+				font-size: 14px;
+			}
+			@media screen and (max-width: 374px) {
+				font-size: 13px;
+			}
+		}
+
+		// チェックリストを並べる
+		ul.check_list {
+			width: 100%;
+			max-width: 600px;
+			margin: auto;
+			justify-content: center;
+
+			li {
+				width: auto;
+
+
+				@media only screen and (max-width: 1000px) {
+					border-bottom: none;
+				}
+			}
+		}
+
+		// エラーエリア
+		div.err_area {
+			.text_box {
+				padding: 0;
+				max-width: 600px;
+				margin: 5px auto 0 auto;
+			}
+		}
+
+		.policy_box {
+			height: 100px;
+			width: 100%;
+			border: 1px solid #ccc;
+			overflow: auto;
+			margin: 20px 0;
+		}
+
+		p.head_agree {
+			margin: 0;
+			span.essential {
+				margin-right: 15px;
+			}
+			@include mq() {
+				margin: 20px 0 0;
+				span.essential {
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}
+
+
+// エラーエリア
+div.err_area {
+	//margin: 5px auto;
+	//padding: 5px 0;
+	display: block;
+
+	p {
+		display: block;
+		padding: 5px 10px;
+		font-weight: bold;
+		color: $err-color;
+		border: $err-color 1px solid;
+		margin: 5px auto 0;
+		text-align: center !important;
+		@extend .font_size_12;
+		border-radius: 5px;
+	}
+
+	.text_box {
+		width: 80%;
+		margin: 5px auto;
+		padding: 15px 0;
+		display: block;
+
+		li {
+			display: block;
+			padding: 5px 10px;
+			font-weight: bold;
+			color: $err-color;
+			border: $err-color 1px solid;
+			margin: 5px auto;
+			text-align: center;
+			@extend .font_size_12;
+			border-radius: 5px;
+		}
+	}
+	.list_box {
+		width: 90%;
+		margin: 0 auto 10px auto;
+		padding: 5px 0;
+
+		li {
+			display: block;
+			padding: 5px 10px;
+			font-weight: bold;
+			color: $err-color;
+			border: $err-color 2px solid;
+			margin: 5px auto;
+			text-align: center;
+			border-radius: 5px;
+		}
+	}
+}
+
+// 確認画面、完了画面のエラー表示
+div.error_area {
+	max-width: 800px;
+	margin: 0 auto;
+	.error_access, .text_box, .list_box {
+		margin: 0 auto 10px auto;
+		padding: 5px 0;
+
+		li {
+			display: block;
+			padding: 5px 10px;
+			font-weight: bold;
+			color: $err-color;
+			border: $err-color 2px solid;
+			margin: 5px auto;
+			text-align: center;
+			border-radius: 5px;
+		}
+
+	}
+}
+
+// 繰り返し要素の追加ボタン、削除ボタン
+.btn_add {
+	padding: 5px 20px;
+	border-radius: 5px;
+	background-color: $main-color;
+	@include link-color(#fff);
+	display: inline-block;
+	@extend .font_size_14;
+	font-weight: 700;
+	border: none;
+
+	&:hover {
+		text-decoration: none;
+		opacity: 0.8;
+	}
+
+	span {
+		padding-left: 12px;
+		position: relative;
+		display: inline-block;
+		&:before {
+			content: "+";
+			position: absolute;
+			left: 0;
+			top: 3px;
+			line-height: 1;
+		}
+	}
+}
+.btn_remove {
+	@extend .btn_add;
+	background-color: $box;
+	@include link-color($base-font-color);
+	span {
+		&:before {
+			content: "-";
+		}
+	}
+}
+
+
+
+p#fm_ajax_message {
+	font-weight: 700;
+	color: $main-color;
+	letter-spacing: 1px;
+	@extend .font_size_14;
+}

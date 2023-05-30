@@ -1,0 +1,151 @@
+@charset 'utf-8';
+@use "../function/index" as *;
+
+// ------------ BASS LAYOUT ------------
+
+// ベースのコンテンツ幅
+
+.g-p-wrapper {
+	@extend %content-width;
+
+	// clearfix
+	@extend %clearfix;
+}
+
+// 1カラムレイアウト設定
+// TOP含む全ページ共通
+.g-p-sec {
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	@include mq() {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	&:first-child {
+		padding-top: 80px;
+
+		@include mq() {
+			padding-top: 30px;
+		}
+	}
+	&:last-child {
+		padding-bottom: 80px;
+
+		@include mq() {
+			padding-bottom: 30px;
+		}
+	}
+
+
+}
+
+
+// 1カラムレイアウト設定
+// TOPと下層ページで1カラムレイアウトを分ける場合、
+// 下層共通の1カラムレイアウトスタイルを↓に記載
+// 設定不要の場合は要削除！！
+div.article {
+
+	.g-p-sec {
+
+		article {
+		}
+	}
+}
+
+
+// 2カラムレイアウト設定
+// TOP含む全ページ共通
+div.g-p-column_2 {
+
+	@extend .g-p-wrapper;
+	padding-top: 50px;
+
+	@include mq() {
+		padding-top: 20px;
+	}
+
+	// メインコンテンツ
+	main {
+		width: 70%;
+		float: left;
+
+		@include mq() {
+			width: 100%;
+			float: none;
+		}
+
+	}
+
+	.g-p-sec {
+		padding: 0;
+	}
+
+	// サイドバー
+	aside {
+		width: 25%;
+		float: right;
+
+		@include mq() {
+			width: 100%;
+			float: none;
+		}
+	}
+}
+
+// 2カラムレイアウト設定
+// TOPと下層ページで2カラムレイアウトを分ける場合、
+// 下層共通の1カラムレイアウトスタイルを↓に記載
+// 設定不要の場合は要削除！！
+div.article {
+	div.g-p-column_2 {
+
+		main {}
+
+		.g-p-sec {}
+
+		aside {}
+
+	}
+}
+
+
+// ページタイトル
+div.g-p-page_ttl {
+	width: 100%;
+	background-color: $main-color;
+	background-position: center center;
+	background-size: cover;
+	padding: 60px 0;
+
+	@include mq() {
+		padding: 40px 0;
+	}
+
+	@include mq(sp) {
+		padding: 30px 0;
+	}
+
+	h1, p.text_ttl {
+		color: #FFF;
+		text-align: center;
+		font-weight: bold;
+		@extend .font_size_30;
+	}
+
+}
+
+// 下層共通スタイル
+// 設定不要の場合は要削除！！
+div.article {
+	// div.panなど、TOPと下層でスタイルが異なる場合はここに定義。
+}
+
+// 404ページ
+div.g-p-n_found {
+	h1, h2 {
+		color: $main-color;
+	}
+}

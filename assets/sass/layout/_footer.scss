@@ -1,0 +1,102 @@
+@charset "utf-8";
+@use "../function/index" as *;
+
+// ------------ FOOTER ------------*/
+
+.footer {
+	width: 100%;
+	padding: 20px 0;
+	margin: auto;
+	background-color: $bg-color;
+	text-align: center;
+
+	a {
+		@include link-color(#666);
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+}
+// Logo
+div.footer-logo {
+	padding: 0;
+
+	img {
+		width: 80%;
+		max-width: 180px;
+		height: auto;
+		margin: auto;
+	}
+}
+
+// サイトマップ
+section.footer-sitemap {
+	margin: auto;
+	padding: 30px 0 20px;
+	@include mq() {
+		width: 100%;
+	}
+}
+.footer-sitemap-list {
+	display: flex;
+	justify-content: space-between;
+	@include mq() {
+		flex-wrap: wrap;
+	}
+
+}
+
+.footer-sitemap-list-item {
+
+	@include mq() {
+		width: 50%;
+		border-bottom: 1px solid $border-color;
+		&:nth-child(1) {
+			border-top: 1px solid $border-color;
+		}
+		&:nth-child(2) {
+			border-top: 1px solid $border-color;
+		}
+		&:nth-child(2n-1) {
+			border-right: 1px solid $border-color;
+		}
+	}
+	a {
+		font-weight: 700;
+		@include mq(){
+			padding: 20px 15px;
+			display: block;
+			text-align: left;
+		}
+		@include mq(ssp) {
+			padding: 15px 10px;
+		}
+	}
+}
+
+// ドキュメントリンク
+section.footer-copyright {
+	padding: 20px 0;
+
+	ul {
+		width: 100%;
+		text-align: center;
+		margin: auto;
+
+		li {
+			display: inline-block;
+			padding: 0 10px;
+			@extend .font_size_14;
+
+			@include mq(sp) {
+				padding: 0 5px;
+			}
+		}
+	}
+
+	p {
+		@extend .font_size_12;
+	}
+}

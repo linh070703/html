@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+// ---- テーマの基本スタイル ----
+
+// メインカラー
+$main-color: #017F44;
+$sub-color: #B1D1B2;
+$err-color: #C0DAC1;
+$hoover-color:#005F32;    // フォームのエラー表示の色として設定
+
+// 標準背景色
+$bg-color: #EEEEEE;   // フッターやセクションの背景色としてよく使用する色を設定
+
+// 標準フォントカラー
+$base-font-color: #444444;
+
+// フォント指定
+// --- ゴシック体 ---
+$base-font-family: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "游ゴシック体", "Yu Gothic", YuGothic, "メイリオ", "Meiryo", 'Roboto', sans-serif;
+// --- 明朝体 ---
+// $base-font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", 游明朝, "Yu Mincho", YuMincho, HGS明朝E, "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+
+// 標準ボーダーカラー
+$border-color: #CCCCCC;   // フォームのテーブル、hrなどのボーダーカラー
+
+// ボックス
+$box: #e1e1e1;   // フォームのテーブルthの背景色など
+
+// 行間（_reset.scssで使用）
+$base-line-height: 1.7em;

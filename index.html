@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Uncity Skeleton Ver.2.0</title>
+
+	<meta name="keywords" content="キーワード,キーワード,キーワード">
+	<meta name="description" content="ディスクリプション。150文字程度が適当。現在はキーワードが評価されないので、ディスクリプションにキーワードを含めながら文章にするのがよいとされる。">
+
+	<link rel="canonical" href="ページのURL" />
+	<meta property="og:url" content="ページのURL" />
+	<meta property="og:title" content="ページのタイトル" />
+	<meta property="og:site_name" content="サイト名" />
+	<meta property="og:description" content="記事の抜粋" />
+	<meta property="og:image" content="画像のURL（フルパス）" />
+	<meta property="og:type" content="ページのタイプ">
+	<meta property="og:locale" content="ja_JP" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@Twitterユーザー名" />
+	<meta name="twitter:image" content="画像のURL（フルパス）" />
+
+	<link rel="shortcut icon" href="./assets/img/icon/favicon.ico" type="image/x-icon" />
+
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/icon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="./assets/img/icon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="./assets/img/icon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="./assets/img/icon/site.webmanifest">
+	<link rel="mask-icon" href="./assets/img/icon/safari-pinned-tab.svg" color="#3a3a3a">
+    <meta name="msapplication-TileColor" content="#3a3a3a">
+	<meta name="theme-color" content="#3a3a3a">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<!--[if IE 7 ]> <html class="ie7"> <![endif]-->
+	<!--[if IE 8 ]> <html class="ie8"> <![endif]-->
+	<!--[if IE 9 ]> <html class="ie9"> <![endif]-->
+
+	<!-- GLOBAL IMPORT -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js" defer></script>
+	<script src="./assets/js/min/effect.min.js" defer></script>
+	<script src="./assets/js/min/scrollEffect.min.js" defer></script>
+
+	<!-- LOCAL IMPORT -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="./assets/js/min/loading.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+<!-- //// ALL START //// -->
+
+<div id="container" class="front">
+
+	<!-- //// HEADER START //// -->
+
+	<header class="header">
+
+		<div class="header-inner g-p-wrapper">
+
+			<!-- 会社名ロゴ -->
+			<h1 class="header-logo">
+				<a href="./">
+					<img src="./assets/img/common/logo.svg" alt="会社名">
+				</a>
+			</h1>
+
+			<!-- ナビゲーション -->
+			<div class="drawer_bg" id="drawer_layer"></div>
+			<nav class="header-nav">
+				<a class="header-nav-list"><img src="./assets/img/common/Screenshot 2023-05-29 163138.png" id="number"></a>
+				<ul class="header-nav-list">
+					<li class="header-nav-list-item"><a href="#">サービス</a></li>
+					<li class="header-nav-list-item"><a href="#">特徴</a></li>
+					<li class="header-nav-list-item"><a href="#">実績</a></li>
+					<li class="header-nav-list-item"><a href="#">料金</a></li>
+					<li class="header-nav-list-item"><a href="#">よくある質問</a></li>
+				</ul>
+			</nav>
+
+			<!-- CVボタン -->
+			<div class="header-cv">
+				<div>
+					<div class="doc">
+						<img src="./assets/img/icon/791_me_h.svg" alt="">
+						<a href="">資料ダウンロード</a>
+					</div>
+					<div class="contact">
+						<img src="./assets/img/icon/Group 29157.png" alt="">
+						<a href="./contact/">お問い合わせ</a>	
+					</div>
+				</div>		
+			</div>
+		</div>
+
+	</header>
+
+	<!-- //// HEADER END //// -->
+
+	<div class="g-p-column_1">
+
+		<!-- //// MAIN CONTENT START //// -->
+
+		<main role="main">
+			<!-- 1st View START -->
+			<div class="top_view" id="slider">
+				<div class="block block_1">
+					<a href="#">
+						<img src="./assets/img/front/Screenshot 2023-05-29 172657.png" alt="会社名" class="hide_sp">
+						<img src="./assets/img/front/slider_sp_01.jpg" alt="会社名" class="hide_pc">
+					</a>
+				</div>
+				<div class="block block_2">
+					<a href="#">
+						<img src="./assets/img/front/Screenshot 2023-05-29 172234.png" alt="会社名" class="hide_sp">
+						<img src="./assets/img/front/slider_sp_02.jpg" alt="会社名" class="hide_pc">
+					</a>
+				</div>
+			</div>
+			<!-- 1st View END -->
+			<div class="g-c-btn center">
+				<div  class="button1">
+					<p class="smolbutton">まずはお気軽に資料請求</p>
+					<a href="#" class="bigbutton1" style="color: #017F44;">メールで資料を受け取る</a>
+				</div>
+				<div class="button2">
+					<p class="smolbutton2">プロのスタッフがご案内</p>
+					<a href="#" class="bigbutton2" >無料相談のお申し込み</a>
+				</div>
+			</div>
+
+			<!-- ブログ START -->
+			<!-- /blog/index.htmlにあるブログ一覧と同じもの↓, div.list_article_gridのsassは_wp.scssで定義 -->
+			<!-- <section class="g-p-sec">
+				<img src="./assets/img/article/こんなお悩みありませんか？.svg" class="center">
+				
+				<article class="g-p-wrapper">
+
+					<div class="article-list_grid">
+						<div class="article-list_grid-item">
+
+							<a href="article.html" class="article-list_grid-item-bg_box">
+
+								<!-- サムネイル 
+								<div class="article-list_grid-item-thum">
+									<img src="./assets/img/article/thum_1.png" data-src="./assets/img/article/noimage.jpg" alt="記事のタイトル" class="lazyload obj_image">
+									<!-- 新着アイコン 
+									<div class="pop">NEW</div>
+								</div>
+
+								<div class="article-list_grid-item-text_cont">
+
+									<!-- タイトル 
+									<h3 class="article-list_grid-item-ttl"><span class="textline">記事のタイトル1記事のタイトル1記事のタイトル1記事のタイトル1記事のタイトル1</span></h3>
+
+									<!-- 日時・カテゴリ 
+									<ul class="article-list_grid-item-info">
+										<li class="article-day">2017年6月7日</li>
+										<li>
+											<ul class="article-cgy">
+												<li><span>カテゴリ1</span></li>
+												<li><span>カテゴリ2</span></li>
+											</ul>
+										</li>
+									</ul>
+
+									<p class="article-list_grid-item-text"><span class="textline">記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト</span></p>
+
+								</div>
+							</a>
+
+						</div>
+
+						<div class="article-list_grid-item">
+
+
+							<a href="article.html" class="article-list_grid-item-bg_box">
+
+								<!-- サムネイル 
+								<div class="article-list_grid-item-thum">
+									<img src="./assets/img/article/thum_1.png" data-src="./assets/img/article/noimage.jpg" alt="記事のタイトル" class="lazyload obj_image">
+									<!-- 新着アイコン 
+									<div class="pop">NEW</div>
+								</div>
+
+								<div class="article-list_grid-item-text_cont">
+
+									<!-- タイトル 
+									<h3 class="article-list_grid-item-ttl"><span class="textline">記事のタイトル1記事のタイトル1記事のタイトル1記事のタイトル1記事のタイトル1</span></h3>
+
+									<!-- 日時・カテゴリ 
+									<ul class="article-list_grid-item-info">
+										<li class="article-day">2017年6月7日</li>
+										<li>
+											<ul class="article-cgy">
+												<li><span>カテゴリ1</span></li>
+												<li><span>カテゴリ2</span></li>
+											</ul>
+										</li>
+									</ul>
+
+									<p class="article-list_grid-item-text"><span class="textline">記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト</span></p>
+
+								</div>
+							</a>
+
+						</div>
+
+						<div class="article-list_grid-item">
+
+							<a href="article.html" class="article-list_grid-item-bg_box">
+
+								<!-- サムネイル 
+								<div class="article-list_grid-item-thum">
+									<img src="./assets/img/article/thum_1.png" data-src="./assets/img/article/noimage.jpg" alt="記事のタイトル" class="lazyload obj_image">
+									<!-- 新着アイコン 
+									<div class="pop">NEW</div>
+								</div>
+
+								<div class="article-list_grid-item-text_cont">
+
+									<!-- タイトル 
+									<h3 class="article-list_grid-item-ttl"><span class="textline">記事のタイトル1記事のタイトル1記事のタイトル1記事のタイトル1記事のタイトル1</span></h3>
+
+									<!-- 日時・カテゴリ 
+									<ul class="article-list_grid-item-info">
+										<li class="article-day">2017年6月7日</li>
+										<li>
+											<ul class="article-cgy">
+												<li><span>カテゴリ1</span></li>
+												<li><span>カテゴリ2</span></li>
+											</ul>
+										</li>
+									</ul>
+
+									<p class="article-list_grid-item-text"><span class="textline">記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト</span></p>
+
+								</div>
+							</a>
+
+						</div>
+
+					</div>
+
+					<div class="g-c-btn center">
+						<a href="./blog/">もっとみる</a>
+					</div>
+
+				</article>
+
+			</section> -->
+			<!-- ブログ END -->
+
+
+
+			<!-- よくあるご質問 START -->
+			<!-- <section class="g-p-sec" id="faq">
+
+				<article class="g-p-wrapper">
+
+					<h2 class="g-c-ttl">よくあるご質問</h2>
+
+					<p class="mb_30">よくあるご質問を入れるページにはFAQ page用のJSON-LDを作成してください。<br>
+					JSON-LDジェネレータ >>> <a href="https://technicalseo.com/tools/schema-markup-generator/" target="_blank" style="color: blue;">https://technicalseo.com/tools/schema-markup-generator/</a><br>
+					作成したJSON-LDは&lt;/body&gt;の前あたりに配置してください。<br>
+					<span style="color: red;">※ FAQのテキスト変更があった場合はJSON-LDの変更も忘れずに！</span></p>
+
+					<dl class="g-c-faq accordion">
+						<dt>
+							<span>質問</span>
+							<p>質問タイトル、質問タイトル、質問タイトル、質問タイトル、</p>
+						</dt>
+						<dd>
+							<div class="detail">
+								<span>回答</span>
+								<p>回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、</p>
+							</div>
+						</dd>
+						<dt>
+							<span>質問</span>
+							<p>質問タイトル、質問タイトル、質問タイトル、質問タイトル、</p>
+						</dt>
+						<dd>
+							<div class="detail">
+								<span>回答</span>
+								<p>回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、</p>
+							</div>
+						</dd>
+						<dt>
+							<span>質問</span>
+							<p>質問タイトル、質問タイトル、質問タイトル、質問タイトル、</p>
+						</dt>
+						<dd>
+							<div class="detail">
+								<span>回答</span>
+								<p>回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、</p>
+							</div>
+						</dd>
+					</dl>
+
+				</article>
+
+			</section> -->
+			<!-- よくあるご質問 END -->
+
+
+		</main>
+		<!-- //// MAIN CONTENT END //// -->
+
+	</div>
+
+
+	<!-- パンくずリスト START -->
+	<!-- <div class="g-c-pan">
+
+		<div class="in g-p-wrapper">
+
+			<p id="breadcrumbs">
+				<span>
+					<span>
+						<a href="./" >TOP</a>
+						<span>
+							<a href="#" >第二階層</a>
+							<span>
+								<a href="#" >第三階層</a>
+								<span class="breadcrumb_last" aria-current="page">ページタイトル</span>
+							</span>
+						</span>
+					</span>
+				</span>
+			</p>
+
+		</div>
+
+	</div> -->
+	<!-- パンくずリスト END -->
+
+
+	<!-- //// FOOTER START //// -->
+	<footer class="footer">
+
+		<!-- <div class="g-p-wrapper">
+
+		<!-- 会社名ロゴ 
+		<div class="footer-logo"><a href="./"><img src="./assets/img/common/logo.svg" alt="会社名"></a></div>
+
+
+		<!-- サイトマップ 
+		<section class="footer-sitemap">
+
+			<ul class="footer-sitemap-list">
+				<li class="footer-sitemap-list-item"><a href="">コンテンツ1</a></li>
+				<li class="footer-sitemap-list-item"><a href="">コンテンツ2</a></li>
+				<li class="footer-sitemap-list-item"><a href="">コンテンツ3</a></li>
+				<li class="footer-sitemap-list-item"><a href="">コンテンツ4</a></li>
+				<li class="footer-sitemap-list-item"><a href="">コンテンツ5</a></li>
+				<li class="footer-sitemap-list-item"><a href="">コンテンツ6</a></li>
+				<li class="footer-sitemap-list-item"><a href="">コンテンツ7</a></li>
+				<li class="footer-sitemap-list-item"><a href="">コンテンツ8</a></li>
+			</ul>
+
+		</section>
+
+
+		<!-- ドキュメントリンク 
+		<section class="copyright">
+
+			<ul>
+				<li><a href="./privacy-policy.html">プライバシーポリシー</a></li>
+				<li><a href="">サイトマップ</a></li>
+			</ul>
+
+			<p>Copyright© crop Inc. All Rights Reserved.</p>
+
+		</section>
+		</div> -->
+
+	</footer>
+	<!-- //// FOOTER END //// -->
+
+
+
+
+	<!-- CookiePolicy START -->
+	<div class="cookie-box display_none" id="cookiePolicy">
+		<div class="cookie-box_inner">
+			<p>
+				このウェブサイトではサイトの利便性の向上を目的にクッキーを使用します。ブラウザの設定によりクッキーの機能を変更することもできます。<br>詳細は<a href="./cookie-policy/">クッキーポリシーについて</a>をご覧ください。サイトを閲覧いただく際には、クッキーの使用に同意いただく必要があります。
+			</p>
+			<button type="button" class="cookie-box_btn" id="cookie_agree">同意する</button>
+		</div>
+	</div>
+	<!-- CookiePolicy END -->
+
+
+</div>
+
+<!-- //// ALL END //// -->
+
+
+<div id="ie_container"><div class="cover"><p>ページを表示できません。<br>このサイトは、最新のブラウザでご覧ください。</p></div></div>
+
+</body>
+</html>

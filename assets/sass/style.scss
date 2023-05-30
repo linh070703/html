@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+
+//ベース
+@use "base/reset";
+@use "function/index";
+@use "base/base";
+
+//プラグイン
+@use "plugins/slick";
+@use "plugins/slick-theme";
+
+//共通
+@use "global/g-project";
+//パーツごとの記述
+@use "global/g-component";
+//スクロールアニメーション
+@use "global/scrollEffect";
+
+//ヘッダー
+@use "layout/header";
+
+//ナビ
+@use "layout/nav";
+
+// ドロワーメニュー
+@use "layout/drawer";
+
+//フッター
+@use "layout/footer";
+
+//フォーム
+@use "pages/form";
+@use "pages/input";
+
+//WP
+@use "wp/editor";
+@use "wp/wp";
+
+//トップページ
+@use "pages/front";
+
+//下層
+
+//FONT IMPORT
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans+JP:wght@400;700&display=swap');

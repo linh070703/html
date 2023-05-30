@@ -1,0 +1,350 @@
+@charset "utf-8";
+@use "../function/index" as *;
+/*
+ * EDITOR STYLE
+ * WPのGutenbergにあてるスタイル
+ * _wp.scssとeditor-style.scssからインポートされるmixin　editor()を定義
+ * [ 注意1 ] _adjust.scssで定義したクラス以外は@extendできません。
+ * [ 注意2 ] Webフォントは使用しないでください。
+ */
+
+// editor()内に投稿スタイルを記載していください
+
+@mixin editor() {
+
+    // 見出し
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: bold;
+    }
+
+    h1 {
+        padding: 2px 0 2px 8px;
+        margin-bottom: 1em;
+        line-height: 1.3em;
+        color: $main-color;
+        border-left: $main-color 3px solid;
+        @extend .font_size_24;
+    }
+
+    h2 {
+        padding: 2px 0 2px 8px;
+        margin-bottom: 1em;
+        line-height: 1.3em;
+        color: $main-color;
+        border-left: $main-color 3px solid;
+        @extend .font_size_20;
+    }
+
+    h3 {
+        @extend .font_size_18;
+    }
+
+    h4 {
+    }
+
+    h5 {
+    }
+
+    h6 {
+    }
+
+    // リンク設定
+    a {
+        &:link,
+        &:visited,
+        &:active,
+        &:hover {
+            text-decoration: underline;
+            color: $main-color;
+        }
+
+    }
+
+    // テキスト
+    p {
+        margin-bottom: 1em;
+
+        br {
+            clear: inherit;
+        }
+    }
+
+    br {
+        clear: both;
+
+        // clearfix
+        @extend %clearfix;
+    }
+
+    // 中央揃え
+    .center {
+        text-align: center;
+        text-indent: 0;
+    }
+
+    // 右揃え
+    .left {
+        float: left;
+        text-indent: 0;
+    }
+
+    // 左揃え
+    .right {
+        float: right;
+        text-indent: 0;
+    }
+
+    // 太字
+    strong {
+        font-weight: bold;
+    }
+
+    // イタリック
+    em {
+        font-style: italic;
+    }
+
+    // 引用
+    blockquote {
+        background-color: $box;
+        padding: 3em 1em;
+        position: relative;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        border: none;
+
+        &:before {
+            content: "“";
+            font-size: 400%;
+            line-height: 1em;
+            color: #FFF;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+
+            @include mq() {
+                left: 5px;
+                top: 5px;
+            }
+        }
+
+        &:after {
+            content: "”";
+            font-size: 400%;
+            line-height: 0em;
+            color: #FFF;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+
+            @include mq() {
+                right: 5px;
+                bottom: 5px;
+            }
+        }
+    }
+
+    // 画像
+    img {
+        max-width: 100%;
+        height: auto !important;
+    }
+
+    // float 右
+    .f_left {
+        float: left;
+
+        @include mq(sp) {
+            float: none;
+        }
+    }
+
+    // float 左
+    .f_right {
+        float: right;
+
+        @include mq(sp) {
+            float: none;
+        }
+    }
+
+    // 画像を中央
+    .aligncenter {
+        margin: 3% auto;
+    }
+
+    // 画像を左
+    .alignright {
+        float: right;
+        margin: 3% 0 3% 3%;
+
+        @include mq(sp) {
+            float: none;
+            margin: 3% auto;
+        }
+    }
+
+    // 画像を右
+    .alignleft {
+        float: left;
+        margin: 3% 3% 3% 0;
+
+        @include mq(sp) {
+            float: none;
+            margin: 3% auto;
+        }
+    }
+
+    // リスト
+    ul,
+    ol {
+        margin: 3% 0;
+        font-weight: bold;
+
+        @include mq() {
+            padding: 10px 0 10px 10px;
+        }
+    }
+
+    li {
+        line-height: 1.5em;
+        list-style-position: inside;
+
+        @include mq(sp) {
+            line-height: 1.7em;
+        }
+    }
+
+    ul {
+
+        li {
+            list-style-type: disc;
+        }
+    }
+
+    ol {
+
+        li {
+            list-style-type: decimal;
+        }
+    }
+
+
+	table {
+		border-collapse: collapse;
+		th, td {
+			border: 1px solid $border-color;
+			padding: 5px 10px;
+		}
+		th {
+			font-weight: bold;
+		}
+	}
+
+
+
+    //埋め込み系
+    .wp-block-embed__wrapper {
+        iframe {
+            width: 100% !important;
+        }
+    }
+
+    .wp-block-embed-youtube {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        margin-bottom: 60px!important;
+        margin-top: 3%;
+
+        .wp-block-embed__wrapper {
+            position: static;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+
+    //動画とかのキャプション
+    .wp-block-embed figcaption {
+        position: absolute;
+        z-index: 10;
+        top: 100.25%;
+        left: 0;
+        right: 0;
+        font-size: 80%;
+        // margin: 2% auto 8%;
+        text-align: center;
+    }
+
+    .wp-block-image figcaption {
+        font-size: 80%;
+        text-align: center;
+    }
+
+
+    //ボタン
+    .wp-block-file__button {
+
+        background-color: $main-color;
+        color: #fff!important;
+        text-decoration: none!important;
+
+        &:hover {
+            background-color: $sub-color;
+            color: #fff!important;
+        }
+    }
+
+
+    .wp-block-button {
+
+        &.aligncenter {
+            text-align: center;
+        }
+        a {
+            margin: 0 auto 50px;
+            width: 90%;
+            max-width: 250px;
+            color: #fff;
+            background: $sub-color !important;
+            padding: 15px 20px;
+            border-radius: 100px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+
+    //SNSプラグイン
+
+    .a2a_button_twitter, .a2a_button_facebook, .a2a_button_line {
+        span {
+            background-color: transparent!important;
+        }
+
+        path {
+            fill:$main-color;
+        }
+    }
+
+    .wp-block-cover {
+        margin: 3% auto;
+    }
+
+}

@@ -1,0 +1,13 @@
+# Directories
+sass-chache
+node_modules
+assets/wp
+assets/js/min
+assets/css
+
+# Files
+*.bat
+*.command
+*.log
+.idea
+.DC_Store

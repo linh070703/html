@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>ニュース</title>
+
+	<!-- 下層は記述を省略しています -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<!--[if IE 7 ]> <html class="ie7"> <![endif]-->
+	<!--[if IE 8 ]> <html class="ie8"> <![endif]-->
+	<!--[if IE 9 ]> <html class="ie9"> <![endif]-->
+
+	<!-- GLOBAL IMPORT -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js" defer></script>
+	<script src="../assets/js/min/effect.min.js" defer></script>
+	<script src="../assets/js/min/scrollEffect.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+
+	<!-- LOCAL IMPORT -->
+
+
+</head>
+
+<body>
+
+	<!-- //// ALL START //// -->
+
+	<div id="container" class="article edit">
+
+
+		<!-- //// HEADER START //// -->
+
+		<header class="header">
+
+			<div class="header-inner g-p-wrapper">
+
+				<!-- 会社名ロゴ -->
+				<h1 class="header-logo">
+				<a href="../">
+					<img src="../assets/img/common/logo.svg" alt="会社名">
+				</a>
+			</h1>
+
+				<!-- ハンバーガーボタン -->
+				<div class="header-toggle-btn" id="toggle">
+					<span class="header-toggle-btn-bar top"></span>
+					<span class="header-toggle-btn-bar middle"></span>
+					<span class="header-toggle-btn-bar bottom"></span>
+				</div>
+
+				<!-- ナビゲーション -->
+				<div class="drawer_bg" id="drawer_layer"></div>
+				<nav class="header-nav">
+					<ul class="header-nav-list">
+						<li class="header-nav-list-item switching">
+							<a href="#"><img src="../assets/img/common/logo.svg" alt="会社名"></a>
+						</li>
+						<li class="header-nav-list-item"><a href="#faq" class="active">Nav1</a></li>
+						<li class="header-nav-list-item header-nav-list-item--parent">
+							<a href="#">Nav2</a>
+							<ul class="header-nav-list-sub">
+								<li><a href="#">Sab1</a></li>
+								<li><a href="#">Sab2</a></li>
+								<li><a href="#">Sab3</a></li>
+								<li><a href="#">Sab4</a></li>
+							</ul>
+						</li>
+						<li class="header-nav-list-item"><a href="#">Nav3</a></li>
+						<li class="header-nav-list-item"><a href="../news/">お知らせ</a></li>
+						<li class="header-nav-list-item"><a href="../blog/">ブログ</a></li>
+						<li class="header-nav-list-item switching">
+							<ul>
+								<li><a href="#">プライバシーポリシー</a></li>
+								<li><a href="../contact/">お問い合わせ</a></li>
+								<li><a href="#">会社概要</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+
+				<!-- CVボタン -->
+				<div class="header-cv">
+					<a href="../contact/"><span>お問い合わせ</span></a>
+				</div>
+
+			</div>
+
+		</header>
+
+		<!-- //// HEADER END //// -->
+
+
+		<!-- //// PAGE TITLE START //// -->
+
+		<div class="g-p-page_ttl">
+
+			<h1>ニュース一覧</h1>
+
+		</div>
+
+		<!-- //// PAGE TITLE END //// -->
+
+
+		<div class="g-p-column_2">
+
+			<!-- //// MAIN CONTENT START //// -->
+
+			<main role="main">
+
+				<!-- CONTENTS START -->
+
+
+				<!-- 投稿一覧（リスト型、文末3点リーダー） -->
+				<section class="g-p-sec">
+
+					<article class="g-p-wrapper">
+
+						<ul class="article-list textend_dots">
+							<li class="article-list-item">
+								<p class="article-list-item-cat"><a>お知らせ</a></p>
+								<p class="article-list-item-date">2021年2月9日</p>
+								<h2 class="article-list-item-ttl"><a href="article.html" class="textline">記事のタイトル、記事のタイトル、記事のタイトル、記事のタイトル、</a></h2>
+							</li>
+							<li class="article-list-item">
+								<p class="article-list-item-cat"><span>企業情報</span></p>
+								<p class="article-list-item-date">2020年12月31日</p>
+								<h2 class="article-list-item-ttl"><a href="article.html" class="textline">記事のタイトル、記事のタイトル、記事のタイトル、記事のタイトル、記事のタイトル、記事のタイトル、記事のタイトル、記事のタイトル、</a></h2>
+							</li>
+						</ul>
+
+					</article>
+
+					<!-- PAGER START -->
+					<ul class="article-pager">
+						<li><a class="first page-numbers" href=""></a></li><!-- 先頭ページへのメニューは必要なければ削除 -->
+						<li><a class="prev page-numbers" href=""></a></li>
+						<li class="active"><span class="page-numbers current">1</span></li>
+						<li><a class="page-numbers" href="">2</a></li>
+						<li><a class="page-numbers" href="">3</a></li>
+						<li><a class="page-numbers" href="">4</a></li>
+						<li><a class="page-numbers" href="">5</a></li>
+						<li><a class="next page-numbers" href=""></a></li>
+						<li><a class="end page-numbers" href=""></a></li><!-- 最後尾ページへのメニューは必要なければ削除 -->
+					</ul>
+					<!-- PAGER END -->
+
+				</section>
+
+
+				<!-- 投稿一覧（リスト型、文末グラデーションで非表示） -->
+				<section class="sec">
+
+					<article class="g-p-wrapper">
+
+						<ul class="article-list textend_grad">
+							<li class="article-list-item">
+								<p class="article-list-item-cat"><a>お知らせ</a></p>
+								<p class="article-list-item-date">2021年2月9日</p>
+								<h2 class="article-list-item-ttl"><a href="article.html" class="textline">記事のタイトル、記事のタイトル、記事のタイトル、記事のタイトル、</a></h2>
+							</li>
+							<li class="article-list-item">
+								<p class="article-list-item-cat"><span>企業情報</span></p>
+								<p class="article-list-item-date">2020年12月31日</p>
+								<h2 class="article-list-item-ttl"><a href="article.html" class="textline">記事のタイトル、記事のタイトル、記事のタイトル、記事のタイトル、記事のタイトル、記事のタイトル、記事のタイトル、記事のタイトル、</a></h2>
+							</li>
+						</ul>
+
+					</article>
+
+					<!-- PAGER START -->
+					<ul class="article-pager">
+						<li><a class="first page-numbers" href=""></a></li><!-- 先頭ページへのメニューは必要なければ削除 -->
+						<li><a class="prev page-numbers" href=""></a></li>
+						<li class="active"><span class="page-numbers current">1</span></li>
+						<li><a class="page-numbers" href="">2</a></li>
+						<li><a class="page-numbers" href="">3</a></li>
+						<li><a class="page-numbers" href="">4</a></li>
+						<li><a class="page-numbers" href="">5</a></li>
+						<li><a class="next page-numbers" href=""></a></li>
+						<li><a class="end page-numbers" href=""></a></li><!-- 最後尾ページへのメニューは必要なければ削除 -->
+					</ul>
+					<!-- PAGER END -->
+
+				</section>
+				<!-- お知らせ END -->
+
+
+
+			</main>
+
+			<!-- //// MAIN CONTENT END //// -->
+
+
+			<!-- //// SIDE CONTENT START //// -->
+
+			<aside class="article-aside">
+
+				<section class="catalog">
+
+					<!-- 最近の投稿（3点リーダー） START -->
+					<article class="article-aside-block">
+						<h2 class="article-aside-ttl">最近の投稿（3点リーダー）</h2>
+
+						<ul class="article-entry textend_dots">
+							<li>
+								<a href="#">
+									<dl>
+										<dt>
+											<!-- サムネイル -->
+											<div class="image_box">
+												<img src="../assets/img/article/thum_1.png" alt="記事のタイトル" class="obj_image">
+											</div>
+										</dt>
+										<dd>
+											<!-- 記事の情報 -->
+											<h3><span class="textline">記事のタイトル1記事のタイトル1記事のタイトル1</span></h3>
+											<p class="article-list_grid-item-text"><span class="textline">記事のテキスト記事のテキスト</span></p>
+										</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<dl>
+										<dt>
+											<!-- サムネイル -->
+											<div class="image_box">
+												<img src="../assets/img/article/thum_2.png" alt="記事のタイトル" class="obj_image">
+											</div>
+										</dt>
+										<dd>
+											<!-- 記事の情報 -->
+											<h3><span class="textline">記事のタイトル2</span></h3>
+											<p class="article-list_grid-item-text"><span class="textline">記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト</span></p>
+										</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<dl>
+										<dt>
+											<!-- サムネイル -->
+											<div class="image_box">
+												<img src="../assets/img/article/thum_3.png" alt="記事のタイトル" class="obj_image">
+											</div>
+										</dt>
+										<dd>
+											<!-- 記事の情報 -->
+											<h3><span class="textline">記事のタイトル3記事のタイトル3</span></h3>
+											<p class="article-list_grid-item-text"><span class="textline">記事のテキスト記事のテキスト</span></p>
+										</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<dl>
+										<dt>
+											<!-- サムネイル -->
+											<div class="image_box">
+												<img src="../assets/img/article/thum_4.png" alt="記事のタイトル" class="obj_image">
+											</div>
+										</dt>
+										<dd>
+											<!-- 記事の情報 -->
+											<h3><span class="textline">記事のタイトル4記事のタイトル4記事のタイトル4記事のタイトル4</span></h3>
+											<p class="article-list_grid-item-text"><span class="textline">記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト</span></p>
+										</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<dl>
+										<dt>
+											<!-- サムネイル -->
+											<div class="image_box">
+												<img src="../assets/img/article/article_01_thum_02.png" alt="記事のタイトル" class="obj_image">
+											</div>
+										</dt>
+										<dd>
+											<!-- 記事の情報 -->
+											<h3><span class="textline">記事のタイトル5</span></h3>
+											<p class="article-list_grid-item-text"><span class="textline">記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト</span></p>
+										</dd>
+									</dl>
+								</a>
+							</li>
+						</ul>
+
+					</article>
+					<!-- 最近の投稿（3点リーダー） END -->
+
+					<!-- 最近の投稿（文末グラデーションで非表示） START -->
+					<article class="article-aside-block">
+						<h2 class="article-aside-ttl">最近の投稿（グラデーション）</h2>
+
+						<ul class="article-entry textend_grad">
+							<li>
+								<a href="#">
+									<dl>
+										<dt>
+											<!-- サムネイル -->
+											<div class="image_box">
+												<img src="../assets/img/article/thum_1.png" alt="記事のタイトル" class="obj_image">
+											</div>
+										</dt>
+										<dd>
+											<!-- 記事の情報 -->
+											<h3>記事のタイトル1記事のタイトル1記事のタイトル1記事のタイトル1</h3>
+											<p>記事のテキスト記事のテキスト</p>
+										</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<dl>
+										<dt>
+											<!-- サムネイル -->
+											<div class="image_box">
+												<img src="../assets/img/article/thum_2.png" alt="記事のタイトル" class="obj_image">
+											</div>
+										</dt>
+										<dd>
+											<!-- 記事の情報 -->
+											<h3>記事のタイトル2</h3>
+											<p>記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト</p>
+										</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<dl>
+										<dt>
+											<!-- サムネイル -->
+											<div class="image_box">
+												<img src="../assets/img/article/thum_3.png" alt="記事のタイトル" class="obj_image">
+											</div>
+										</dt>
+										<dd>
+											<!-- 記事の情報 -->
+											<h3>記事のタイトル3記事のタイトル3記事のタイトル3</h3>
+											<p>記事のテキスト記事のテキスト</p>
+										</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<dl>
+										<dt>
+											<!-- サムネイル -->
+											<div class="image_box">
+												<img src="../assets/img/article/thum_4.png" alt="記事のタイトル" class="obj_image">
+											</div>
+										</dt>
+										<dd>
+											<!-- 記事の情報 -->
+											<h3>記事のタイトル4記事のタイトル4</h3>
+											<p>記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト</p>
+										</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<dl>
+										<dt>
+											<!-- サムネイル -->
+											<div class="image_box">
+												<img src="../assets/img/article/article_01_thum_02.png" alt="記事のタイトル" class="obj_image">
+											</div>
+										</dt>
+										<dd>
+											<!-- 記事の情報 -->
+											<h3>記事のタイトル5</h3>
+											<p>記事のテキスト記事のテキスト記事のテキスト記事のテキスト記事のテキスト</p>
+										</dd>
+									</dl>
+								</a>
+							</li>
+						</ul>
+
+					</article>
+					<!-- 最近の投稿（文末グラデーションで非表示） END -->
+
+
+					<!-- カテゴリ START -->
+					<article class="article-aside-block">
+						<h2 class="article-aside-ttl">カテゴリ</h2>
+
+						<ul class="article-cgy">
+							<li><a href="#">カテゴリ1</a></li>
+							<li><a href="#">カテゴリ2</a></li>
+							<li><a href="#">カテゴリ3</a></li>
+							<li><a href="#">カテゴリ4</a></li>
+							<li><a href="#">カテゴリ5</a></li>
+						</ul>
+
+					</article>
+					<!-- カテゴリ END -->
+
+
+					<!-- アーカイブ START -->
+					<article class="article-aside-block">
+						<h2 class="article-aside-ttl">アーカイブ</h2>
+
+						<select class="article-archive" name="">
+							<option value="" selected>月を選択</option>
+							<option value="">2017年2月</option>
+							<option value="">2017年1月</option>
+							<option value="">2016年12月</option>
+							<option value="">2016年11月</option>
+							<option value="">2016年10月</option>
+							<option value="">2016年9月</option>
+							<option value="">2016年8月</option>
+						</select>
+
+					</article>
+					<!-- アーカイブ END -->
+
+					<!-- タグ START -->
+					<article class="article-aside-block">
+						<h2 class="article-aside-ttl">タグ</h2>
+
+						<ul class="article-tag">
+							<li><a href="#">りんご</a></li>
+							<li><a href="#">みかん</a></li>
+							<li><a href="#">キウイフルーツ</a></li>
+							<li><a href="#">バナナ</a></li>
+							<li><a href="#">パイナップル</a></li>
+							<li><a href="#">ぽんかん</a></li>
+							<li><a href="#">グレープフルーツ</a></li>
+						</ul>
+
+					</article>
+					<!-- タグ END -->
+
+				</section>
+
+			</aside>
+
+			<!-- //// SIDE CONTENT END //// -->
+
+		</div>
+
+		<!-- パンくずリスト START -->
+		<div class="g-c-pan">
+
+			<div class="in g-p-wrapper">
+
+				<p id="breadcrumbs">
+                <span>
+                    <span>
+                        <a href="../" >TOP</a>
+                        <span>
+                            <a href="#" >第二階層</a>
+                            <span>
+                                <a href="#" >第三階層</a>
+                                <span class="breadcrumb_last" aria-current="page">ページタイトル</span>
+                            </span>
+                        </span>
+                    </span>
+                </span>
+            </p>
+
+			</div>
+
+		</div>
+		<!-- パンくずリスト END -->
+
+
+		<!-- //// FOOTER START //// -->
+		<footer class="footer">
+
+			<div class="g-p-wrapper">
+
+				<!-- 会社名ロゴ -->
+				<div class="footer-logo"><a href="./"><img src="./assets/img/common/logo.svg" alt="会社名"></a></div>
+
+
+				<!-- サイトマップ -->
+				<section class="footer-sitemap">
+
+					<ul class="footer-sitemap-list">
+						<li class="footer-sitemap-list-item"><a href="">コンテンツ1</a></li>
+						<li class="footer-sitemap-list-item"><a href="">コンテンツ2</a></li>
+						<li class="footer-sitemap-list-item"><a href="">コンテンツ3</a></li>
+						<li class="footer-sitemap-list-item"><a href="">コンテンツ4</a></li>
+						<li class="footer-sitemap-list-item"><a href="">コンテンツ5</a></li>
+						<li class="footer-sitemap-list-item"><a href="">コンテンツ6</a></li>
+						<li class="footer-sitemap-list-item"><a href="">コンテンツ7</a></li>
+						<li class="footer-sitemap-list-item"><a href="">コンテンツ8</a></li>
+					</ul>
+
+				</section>
+
+
+				<!-- ドキュメントリンク -->
+				<section class="copyright">
+
+					<ul>
+						<li><a href="./privacy-policy.html">プライバシーポリシー</a></li>
+						<li><a href="">サイトマップ</a></li>
+					</ul>
+
+					<p>Copyright© crop Inc. All Rights Reserved.</p>
+
+				</section>
+			</div>
+
+		</footer>
+		<!-- //// FOOTER END //// -->
+
+
+		<!-- ページトップスクロール -->
+		<div id="pageup">
+			<a href="#top"><img src="../assets/img/arrow/pageup.svg" alt="ページトップ"></a>
+		</div>
+
+		<!-- CookiePolicy START -->
+		<div class="cookie-box display_none" id="cookiePolicy">
+			<div class="cookie-box_inner">
+				<p>
+                このウェブサイトではサイトの利便性の向上を目的にクッキーを使用します。ブラウザの設定によりクッキーの機能を変更することもできます。<br>詳細は<a href="./cookie-policy/">クッキーポリシーについて</a>をご覧ください。サイトを閲覧いただく際には、クッキーの使用に同意いただく必要があります。
+            </p>
+				<button type="button" class="cookie-box_btn" id="cookie_agree">同意する</button>
+			</div>
+		</div>
+		<!-- CookiePolicy END -->
+
+	</div>
+
+	<!-- //// ALL END //// -->
+
+
+	<div id="ie_container">
+		<div class="cover">
+			<p>ページを表示できません。<br>このサイトは、最新のブラウザでご覧ください。</p>
+		</div>
+	</div>
+
+</body>
+</html>

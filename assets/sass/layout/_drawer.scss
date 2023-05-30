@@ -1,0 +1,232 @@
+@charset "utf-8";
+@use "../function/index" as *;
+
+//後ろの要素固定
+body.drawer_open {
+	overflow: hidden;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+
+// ハンバーガーの設定
+.header-toggle-btn {
+	display:none;
+
+	@include mq() {
+		position:absolute;
+		z-index:1001;
+		top:0;
+		right: 0;
+		display:block;
+		box-sizing:content-box;
+		width: 30px;
+		padding:15px 7px 15px;
+		-webkit-transform:translateZ(0);
+		transform:translateZ(0);
+		border:0;
+		outline:0;
+		background-color:transparent;
+	}
+}
+//ハンバーガーボタン
+.header-toggle-btn-bar {
+	background-color: $main-color;
+	display: block;
+	width: 100%;
+	height: 2px;
+	border: 0;
+	-webkit-transition: background-color .35s ease, transform .35s ease;
+	transition: background-color .35s ease, transform .35s ease;
+}
+
+.header-toggle-btn-bar + .header-toggle-btn-bar {
+	margin-top: 9px;
+}
+
+//閉じるボタン
+.header-toggle-btn.toggle_active {
+	.header-toggle-btn-bar {
+		background-color: $sub-color;
+	}
+	.top {
+		-webkit-transform: translateY(15px) translateX(0) rotate(45deg);
+		transform: translateY(15px) translateX(0) rotate(45deg);
+		width: 30px;
+	}
+	.middle {
+		opacity: 0;
+	}
+	.bottom {
+		-webkit-transform: translateY(-7px) translateX(0) rotate(-45deg);
+		transform: translateY(-7px) translateX(0) rotate(-45deg);
+		width: 30px;
+		margin-left: 0;
+	}
+}
+
+//開いた時の背景
+.drawer_bg {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	background-color: rgba(51, 51, 51, 0.5);
+}
+
+.header-nav {
+
+	@include mq() {
+		display: none;
+		opacity: 0;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-webkit-overflow-scrolling: touch;
+
+		//開く時の動き
+		&.is_open {
+			display: block;
+			top: 0;
+			opacity: 1;
+			animation-duration: 0.4s;
+			//アニメーションの種類
+			animation-name: fadeInRight;
+		}
+
+		//閉じる時の動き（何もしないとパッと閉じる）
+		&.is_close {
+			// animation-duration: 0.4s;
+			// //アニメーションの種類
+			// animation-name: fadeOutRight;
+
+		}
+	}
+}
+
+
+/**
+ * drawer animation
+ */
+
+//右から
+@keyframes fadeInRight {
+	from {
+		opacity: 0;
+		transform: translate3d(100%, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes fadeOutRight {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(100%, 0, 0);
+	}
+}
+
+//左から
+@keyframes fadeInLeft {
+	from {
+		opacity: 0;
+		transform: translate3d(-100%, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes fadeOutLeft {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(-100%, 0, 0);
+	}
+}
+
+//上から
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes fadeOutDown {
+	from {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+
+	to {
+		opacity: 0;
+		transform: translate3d(0, -100%, 0);
+
+	}
+}
+
+//下から
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes fadeOutUp {
+	from {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+
+	to {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+
+	}
+}
+
+//大きく
+@keyframes fadeInScale {
+	from {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes fadeOutScale {
+	from {
+		opacity: 1;
+		transform: scale(1);
+	}
+	to {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+}

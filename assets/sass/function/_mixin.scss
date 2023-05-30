@@ -1,0 +1,108 @@
+@charset "UTF-8";
+@use "variable" as *;
+
+// ブレークポイントの設定
+$breakpoints: (
+	'sssp': 'screen and (max-width: 374px)',
+	'ssp': 'screen and (max-width: 414px)',
+	'sp': 'screen and (max-width: 568px)',
+	'tb': 'screen and (max-width: 768px)',
+	'spc': 'screen and (max-width: 1000px)',
+	'pc': 'screen and (max-width: 1280px)',
+) !default;
+
+$breakpoints_up: (
+	'sssp': 'screen and (min-width: 375px)',
+	'ssp': 'screen and (min-width: 415px)',
+	'sp': 'screen and (min-width: 569px)',
+	'tb': 'screen and (min-width: 769px)',
+	'spc': 'screen and (min-width: 1001px)',
+	'pc': 'screen and (min-width: 1281px)',
+) !default;
+
+@mixin mq($breakpoint: tb) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+@mixin mq_up($breakpoint: tb) {
+	@media #{map-get($breakpoints_up, $breakpoint)} {
+		@content;
+	}
+}
+
+// リンクカラー
+@mixin link-color($color) {
+
+	&, &:hover, &:visited, &:link {
+		color: $color;
+		text-decoration: none;
+	}
+
+}
+
+
+// Position
+@mixin abs-position ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+// @keyframesのベンダープレフィックス対応ミックスイン
+// パラメータ$nameにアニメーション名を設定
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+// テキストを指定行数だけ表示（あふれたときは文末に3点リーダーつける）
+// $rows : 表示したい行数
+// $line-height : 要素に適用されているline-height値 (emまたはpxの単位をつける必要あり)
+// 内部要素に.textline のクラスをつける必要があります。
+// 例）
+// <h3>		// この要素にミックスインtextend-dotsをインクルードする => @include textend-dots(2);
+// 	<span class="textline">このテキストが指定の行数以降は非表示になります。文末は3点リーダー（…）です。</span>
+// </h3>
+// 【重要】IEでは3点リーダーは挿入されませんが、表示したい行数以降は非表示になります。
+@mixin textend-dots($rows: 1, $line-height: 1.7em) {
+	overflow: hidden;
+	max-height: $line-height * $rows;
+	line-height: $line-height;
+	.textline {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: $rows;	// 表示する行数
+		line-height: $line-height;
+	}
+}
+
+// テキストを指定行数だけ表示（あふれたときは文末がグラデーションで非表示）
+// $rows : 表示したい行数
+// $line-height : 要素に適用されているline-height値
+// ※背景色が白(#fff)のときのみ対応。別の色のときはtextend_grad.pngの色違いの画像を作成して&:afterのbackground-imageを上書きしてください。
+// ※グラデーションをかける文字数はデフォルトでは5文字です。変更する場合は&:afterのwidthを上書きしてください。
+@mixin textend-grad($rows: 1, $line-height: 1.7em) {
+	height: $line-height * $rows;	// line-height値を設定（2行表示の場合はline-height値 x2）
+	overflow: hidden;
+	display: block;
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		width: 5em;		// 5文字分グラデーションさせる場合
+		height: $line-height;	// line-height値
+		background-image: url(../img/article/textend_grad.png);
+		background-size: 100% 100%;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+}

@@ -1,0 +1,121 @@
+@charset "utf-8";
+@use "../function/index" as *;
+
+// ------------ BASS ------------
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+
+	// PC表示は幅を最低限固定
+	min-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include mq() {
+		min-width: inherit;
+	}
+}
+
+body {
+	font-family: $base-font-family;
+	color: $base-font-color;
+	@extend .font_size_16;
+	line-height: $base-line-height;
+}
+
+div#container {
+	width: 100%;
+	height: 100%;
+}
+
+// 選択テキストのカラー
+::selection { background: $main-color; color: #FFF; }
+::-moz-selection { background: $main-color; color: #FFF; }
+
+
+// ------------ BASS STYLE ------------
+
+
+// リンク設定
+a {
+	@include link-color($base-font-color);
+	transition: background-color 0.4s ease, color 0.4s ease, opacity 0.4s ease;
+
+	img {
+		transition: opacity 0.4s ease;
+	}
+
+	&:hover {
+		opacity: 0.8;
+		img {
+			opacity: 0.8;
+		}
+	}
+}
+
+
+// TABLE LAYOUT
+
+@mixin tb_block{
+	@include mq() {
+		&, thead, tbody, tfoot, tr {
+			display: block;
+			width: 100%;
+		}
+		tr {
+			th, td {
+				display: block;
+				width: 100%;
+			}
+		}
+
+	}
+}
+table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+
+	// table用クラス：~768pxでは縦1列表示にする
+	&.tb_block {
+		@include tb_block();
+	}
+
+	// table用クラス：~568pxでは縦1列表示にする
+	&.sp_block {
+		@include mq(sp) {
+			&, thead, tbody, tfoot, tr {
+				display: block;
+				width: 100%;
+			}
+			tr {
+				th, td {
+					display: block;
+					width: 100%;
+				}
+			}
+
+		}
+	}
+
+}
+
+picture {
+	display: block;
+}
+
+br {
+	line-height: inherit;
+}
+
+
+// 斜線
+hr {
+	height: 1px;
+	clear: both;
+	border: none;
+	border-top: $border-color 1px solid;
+	color: #FFF;
+}
