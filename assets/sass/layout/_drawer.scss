@@ -8,6 +8,14 @@ body.drawer_open {
 	touch-action: none;
 }
 
+.cover {
+	width:100%;
+	img {
+		width: 100%;
+		object-fit:cover;
+	}
+}
+
 // ハンバーガーの設定
 .header-toggle-btn {
 	display:none;

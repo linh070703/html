@@ -32,15 +32,15 @@ header {
 
 // CV
 .header-cv {
-	width: 200px;
+	width: 300px;
 	height: 100%;
 	position: absolute;
-	display: inline-grid;
-	div{
+	display: flex;
 		.doc{
-			width: 150px;
+			width: 50%;
 			display: block;
 			background-color: $sub-color;
+
 			a {
 				margin: auto 10px;
 				@include link-color(#FFF);
@@ -51,7 +51,7 @@ header {
 			}
 		}
 		.contact {
-			width: 150px;
+			width: 50%;
 			display: block;
 			background-color: $main-color;
 			a {
@@ -62,7 +62,6 @@ header {
 			&:hover {
 				opacity: 0.8;
 			}
-		}
 	}
 	
 

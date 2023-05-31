@@ -344,36 +344,21 @@ ul.article-cgy_list {
 
 // 投稿一覧（3列）
 .article-list_grid {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0 -8px 40px;
+	width: 80%;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 5%;
+	margin: auto;
 
-	@include mq(sp) {
-		margin: 0 -5px 20px;
+	img {
+		width: 1000%;
 	}
-	@include mq(ssp) {
-		margin: 0 0 20px;
-	}
-
-
-	a {
-		display: block;
-		&:hover {
-			opacity: 0.8;
-			text-decoration: none;
-			img {
-				opacity: 1;
-			}
-		}
-	}
-
-
 }
 
 .article-list_grid-item {
-	width: 33.33%;
-	padding: 0 8px;
+	width: 100%;
 	margin-bottom: 20px;
+	
 	@include mq(sp) {
 		width: 50%;
 		padding: 0 5px;
@@ -381,6 +366,12 @@ ul.article-cgy_list {
 	@include mq(ssp) {
 		width: 100%;
 	}
+	p {
+		position: absolute;
+		font-weight: 1000;
+		bottom: 20%;
+	}
+	
 }
 .article-list_grid-item-bg_box {
 	// background-color: $bg-color;
