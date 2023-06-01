@@ -13,7 +13,31 @@ div.front {
 
 div.top_view {
 	width: 100%;
+	margin-bottom: 1%;
 
+	#change_img {
+		position: absolute;	
+		padding-top: 5%;
+		padding-left: 6%;
+		width: 100%;
+		
+		.clicked {
+			font-size: 200%;
+			font-weight: 500;
+			background-color: white;
+			color:  $main-color;
+			padding: 0 2%;
+		}
+		.not_clicked {
+			font-size: 200%;
+			font-weight: 700;
+			background-color: #47A070;
+			border: white 2px solid;
+			color:  white;
+			padding: 0 2%;
+		}
+	}
+	
 	.block {
 		img {
 			width: 100%;
@@ -21,80 +45,80 @@ div.top_view {
 	}
 
 	// 画像をPC/SPで変更する場合
-	.slick-slide img {
-		&.hide_sp {
-			@extend .hide_sp;
-		}
-		&.hide_pc {
-			@extend .hide_pc;
-		}
-	}
+	// .slick-slide img {
+	// 	&.hide_sp {
+	// 		@extend .hide_sp;
+	// 	}
+	// 	&.hide_pc {
+	// 		@extend .hide_pc;
+	// 	}
+	// }
 
 	// 前・次ボタンの設定
-	.slick-prev,
-	.slick-next {
-		width: 5%;
-		height: 100%;
-		position: absolute;
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: 30px 30px;
+	// .slick-prev,
+	// .slick-next {
+	// 	width: 5%;
+	// 	height: 100%;
+	// 	position: absolute;
+	// 	background-position: center center;
+	// 	background-repeat: no-repeat;
+	// 	background-size: 30px 30px;
 
-		@include mq() {
-			width: 10%;
-		}
-	}
+	// 	@include mq() {
+	// 		width: 10%;
+	// 	}
+	// }
 
-	.slick-prev:before,
-	.slick-next:before {
-		content:"";
-	}
+	// .slick-prev:before,
+	// .slick-next:before {
+	// 	content:"";
+	// }
 
 	// 前ボタンの設定
-	.slick-prev {
-		left: 0;
-		background-image:url(../img/arrow/arrow_left_w.svg);
-	}
+	// .slick-prev {
+	// 	left: 0;
+	// 	background-image:url(../img/arrow/arrow_left_w.svg);
+	// }
 
 	// 次ボタンの設定
-	.slick-next {
-		right: 0;
-		background-image:url(../img/arrow/arrow_right_w.svg);
-	}
+	// .slick-next {
+	// 	right: 0;
+	// 	background-image:url(../img/arrow/arrow_right_w.svg);
+	// }
 
-	.slick-arrow {
-		z-index: 10;
-	}
+	// .slick-arrow {
+	// 	z-index: 10;
+	// }
 
 	// docボタンの設定
-	.slick-dots {
-		bottom: 10px;
+	// .slick-dots {
+	// 	bottom: 10px;
 
-		li {
-			width: 10px;
-			height: 10px;
-			button {
-				width: 10px;
-				height: 10px;
-				padding: 0;
-				border-radius: 50%;
-				background-color: $bg-color;
-				@extend .transitions;
+	// 	li {
+	// 		width: 10px;
+	// 		height: 10px;
+	// 		button {
+	// 			width: 10px;
+	// 			height: 10px;
+	// 			padding: 0;
+	// 			border-radius: 50%;
+	// 			background-color: $bg-color;
+	// 			@extend .transitions;
 
-				&:hover {
-					background-color: $main-color;
-				}
-				&:before {
-					display: none;
-				}
-			}
+	// 			&:hover {
+	// 				background-color: $main-color;
+	// 			}
+	// 			&:before {
+	// 				display: none;
+	// 			}
+	// 		}
 
-			&.slick-active {
-				button {
-					background-color: $main-color;
-				}
-			}
-		}
-	}
+	// 		&.slick-active {
+	// 			button {
+	// 				background-color: $main-color;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 }

@@ -1,34 +1,70 @@
 // 追従(CookiePolicy)の表示
 jQuery(function($) {
-	
-	if ( $('#cookiePolicy').length > 0 ) {
-		var cookiePolicy = $('#cookiePolicy');  
-		cookiePolicy.hide();
-		if(localStorage.getItem('cookieUse') === null) {
+	$('#button_img1').click(function() {
+		$("#img1").fadeIn()
+		$('#img2').hide()
+	})
 
-			// スクロール時の表示・非表示
-			$(window).on("scroll", dispAgree);
-
-			// 同意ボタンクリック
-			$('#cookie_agree').on("click", function() {
-				$(window).off("scroll", dispAgree);
-				localStorage.setItem('cookieUse', 'agree');
-				cookiePolicy.hide();
-			})
-		}
-
-		//スクロールが100に達したらクッキー同意を表示
-		function dispAgree() {
-			if ($(this).scrollTop() > 100) {
-				cookiePolicy.fadeIn();
-			} else {
-				cookiePolicy.fadeOut();
-			}
-		}
+	$('#button_im2').click(function() {
+		$("#img2").fadeIn()
+		$('#img1').hide()
+	})
+	if ($("#img1").is(":visible") == true) {
+		$('#button_img1').addClass("clicked")
+		$('#button_img2').addClass("not_clicked")
+		$('#img2').hide()
+	} else {
+		$("button_img2").addclass("clicked")
+		$('#button_img1').addClass("not_clicked")
+		$('#img1').hide()
 	}
+		
+	})
+		// var  = $('#cookiePolicy');  
+		// cookiePolicy.hide();
+		// if(localStorage.getItem('cookieUse') === null) {
+
+		// 	// スクロール時の表示・非表示
+		// 	$(window).on("scroll", dispAgree);
+
+		// 	// 同意ボタンクリック
+		// 	$('#cookie_agree').on("click", function() {
+		// 		$(window).off("scroll", dispAgree);
+		// 		localStorage.setItem('cookieUse', 'agree');
+		// 		cookiePolicy.hide();
+		// 	})
+		
+
+	// $(document).ready(function(){
+	// 	$("#button_img1").click(function()		{
+	// 		$('.img1').fadeIn()
+	// 	});
+	// 	});
+	// 	$('#img1').on("click", function() {
+			
+	// 	})
+
+	// 	//スクロールが100に達したらクッキー同意を表示
+	// 	function dispAgree() {
+	// 		if ($(this).scrollTop() > 100) {
+	// 			cookiePolicy.fadeIn();
+	// 		} else {
+	// 			cookiePolicy.fadeOut();
+	// 		}
+	// 	}
+	
 
 	
-});
+
+jQuery(function($) {
+	$('#cookie_agree').on("click", function() {
+		$(window).off("scroll", dispAgree);
+		localStorage.setItem('cookieUse', 'agree');
+		cookiePolicy.hide();
+	})
+	
+})
+
 
 // ページ内アンカーリンクのスクロールエフェクト
 // ヘッダーが固定の場合はheaderHightにヘッダーの高さを設定(PC/SP要設定)
@@ -130,8 +166,6 @@ jQuery(function($) {
 
 // アコーディオンの起動
 jQuery(function($) {
-	
-	
 	if ( $('dl.accordion dt').length > 0 ) {
 		
 		$("dl.accordion dt").click(function(){
