@@ -26,21 +26,20 @@
 }
 .header-nav-list {
 	padding: auto 10px ;
-	// clearfix
-	img {
+	#number {
 		float: right;
 		}
+	li {
+
+		@include mq() {
+			opacity: 0;
+		}
+	}
 	@extend %clearfix;
 	// 折りたたみ時
-	@include mq() {
-		width: 100%;
-		padding: 20px 0;
-	}
+	
+	
 
-}
-#number img{
-	position: relative;
-	right: 1000px;
 }
 
 .header-nav-list-item {

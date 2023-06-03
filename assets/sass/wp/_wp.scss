@@ -349,6 +349,10 @@ ul.article-cgy_list {
 	grid-template-columns: auto auto auto;
 	grid-gap: 5%;
 	margin: auto;
+	@include mq() {
+		width:100%;
+		display: block;
+	}
 }
 
 .article-list_grid-item {

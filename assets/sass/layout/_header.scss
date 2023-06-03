@@ -8,8 +8,9 @@ header {
 }
 
 .header-inner {
-	height: 80px;
+	height: 100px;
 	margin: auto;
+	position: relative;
 
 	@include mq() {
 		min-width: inherit;
@@ -20,50 +21,75 @@ header {
 // Logo
 .header-logo {
 	@extend .vertical;
-	margin: 0% 5%;
+	
 	a {
 		display: block;
 
 		img {
 			width: 100%;
+			margin: 5%;
 		}
 	}
 }
 
 // CV
 .header-cv {
-	width: 300px;
+	padding-left: 20%;
+	height: inherit;
+	width: 23%;
 	height: 100%;
 	position: absolute;
-	display: flex;
-		.doc{
-			width: 50%;
-			display: block;
-			background-color: $sub-color;
-
-			a {
-				margin: auto 10px;
-				@include link-color(#FFF);
-				font-weight: bold;
-			}
-			&:hover {
-				opacity: 0.8;
-			}
-		}
-		.contact {
-			width: 50%;
-			display: block;
-			background-color: $main-color;
-			a {
-				margin: auto 15%;
-				@include link-color(#FFF);
-				font-weight: bold;
-			}
-			&:hover {
-				opacity: 0.8;
-			}
-	}
+	display: flex;	
 	
+	.doc{
+		width: 100%;
+		display: block;
+		background-color: $sub-color;
+		a {
+			margin: auto 10px;
+			@include link-color(#FFF);
+			font-weight: bold;
+			font-size: medium;
+			margin-bottom: 12%;
+			display: flex;
+		}
+		img {
+			display: flex;
+			width: 25%;
+			margin-top: 10%;
+			margin-bottom: -10%;
+		}
+		&:hover {
+			opacity: 1;
+		}
+	}
+		
+	.contact {
+		width: 100%;
+		display: block;
+		background-color: $main-color;
+		text-align: center;
+		a {
+			margin: auto 10px;
+			@include link-color(#FFF);
+			font-weight: bold;
+			font-size: medium;
+			margin-bottom: 12%;
+		}
+		img {
+			display: flex;
+			width: 25%;
+			margin-top: 10%;
+			margin-bottom: -10%;
+		}
+		&:hover {
+			background-color: $hoover-color;
+		}
+	
+	}
+	// @include mq_up() {
+	// 	width: 50%;
+	// }
 
 	@include abs-position(0px, 0px, auto, auto);
 

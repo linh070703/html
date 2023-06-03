@@ -105,9 +105,9 @@ body.drawer_open {
 
 		//閉じる時の動き（何もしないとパッと閉じる）
 		&.is_close {
-			// animation-duration: 0.4s;
-			// //アニメーションの種類
-			// animation-name: fadeOutRight;
+			animation-duration: 0.4s;
+			//アニメーションの種類
+			animation-name: fadeOutRight;
 
 		}
 	}

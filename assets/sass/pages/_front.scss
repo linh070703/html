@@ -10,6 +10,22 @@ div.front {
 
 }
 
+.with_caption{
+	position: relative;	
+	.caption {
+		// position: absolute;
+		transform:  translate(-50%);
+		z-index: 9;
+		width: 100%;
+		max-width: 1080PX;
+		@include abs-position(50%,auto,auto,50%)
+		
+	}
+	h1.capton {
+		display: flex;
+	}	
+
+}
 
 div.top_view {
 	width: 100%;
@@ -20,6 +36,10 @@ div.top_view {
 		padding-top: 5%;
 		padding-left: 6%;
 		width: 100%;
+
+		button {
+			position: absolute;	
+		}
 		
 		.clicked {
 			font-size: 200%;
