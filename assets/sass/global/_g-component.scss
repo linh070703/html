@@ -201,20 +201,31 @@ div.g-c-basket_box {
 		border: $main-color 5px solid ;
 		border-radius: 100px;
 		background-color: white; 
-		padding: 25px 100px 20px 100px;
+		padding: 25px 90px 20px 90px;
+		margin-bottom: 8%;
 
 		.smolbutton{			
 			font-size: 15px;
+			font-weight: 1000;
 			border-radius: 100px;
 			position: absolute;
 			background-color: $main-color; 
 			color: white;
-			padding: 5px 70px;
-			margin: -40px;
+			padding: 10px 70px;
+			margin: -50px;
 			margin-right: 10%;
+			@include mq(sp){
+				font-size: 14px;
+				padding: 10px 60px;
+				margin-right: 5%;
+			}
 		}
 		.bigbutton1 {
 			font-size: 20px;
+			@include mq(sp){
+				font-size: 16px;
+				padding: 5px 3px;
+			}
 		}
 		
 		&:hover{
@@ -225,7 +236,8 @@ div.g-c-basket_box {
 .button2 {	
 	background-color: $main-color;
 	border-radius: 100px;
-	padding: 35px 100px 20px 100px;
+	padding: 30px 100px 25px 100px;
+	margin-bottom: 8%;
 
 	.smolbutton2 {
 		font-weight: 1000;
@@ -235,14 +247,22 @@ div.g-c-basket_box {
 		border: $main-color 5px solid ;
 		background-color: white; 
 		color: $main-color;
-		padding: 5px 50px;
+		padding: 5px 75px;
 		margin: -50px;
-		margin-right: 7%;
+		@include mq(sp){
+			font-size: 14px;
+			padding: 10px 60px;
+			margin-right: 5%;
+		}
+		
 	}
 
 	.bigbutton2 {
 		font-size: 20px;
-		top: 500px;
+		@include mq(sp){
+			font-size: 16px;
+			padding: 5px 3px;
+		}
 	}
 		
 	&:hover {

@@ -8,14 +8,6 @@ body.drawer_open {
 	touch-action: none;
 }
 
-.cover {
-	width:100%;
-	img {
-		width: 100%;
-		object-fit:cover;
-	}
-}
-
 // ハンバーガーの設定
 .header-toggle-btn {
 	display:none;
@@ -85,8 +77,9 @@ body.drawer_open {
 }
 
 .header-nav {
-
-	@include mq() {
+	position: absolute;
+	margin-right: 5%;
+	@include mq_up(tb) {
 		display: none;
 		opacity: 0;
 		-webkit-backface-visibility: hidden;
@@ -105,13 +98,13 @@ body.drawer_open {
 
 		//閉じる時の動き（何もしないとパッと閉じる）
 		&.is_close {
-			// animation-duration: 0.4s;
+			animation-duration: 0.4s;
 			// //アニメーションの種類
-			// animation-name: fadeOutRight;
+			animation-name: fadeOutRight;
 
 		}
 	}
-}
+}	
 
 
 /**

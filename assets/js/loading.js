@@ -1,7 +1,7 @@
 // トップスライダーの起動 
 jQuery(function($) {
 
-	if ( $('#slider').length > 0 ) {
+	if ( $('#slide').length > 0 ) {
 
 		// カルーセルスライダーの設定
 		var options = {
@@ -32,6 +32,6 @@ jQuery(function($) {
 		}
 		*/
 
-		$('#slider').slick(options);
+		$('#slide').fade(options);
 	}
 });

@@ -10,32 +10,116 @@ div.front {
 
 }
 
+.with_caption{
+	position: relative;	
+	.caption {
+		// position: absolute;
+		transform:  translate(-50%);
+		z-index: 9;
+		width: 100%;
+		max-width: 1080PX;
+		@include abs-position(50%,auto,auto,50%)
+		
+	}
+	h1.capton {
+		display: flex;
+	}	
 
-div.top_view {
-	width: 100%;
+}
+
+.top_view {
 	margin-bottom: 1%;
+	background-repeat: no-repeat;
+  	background-size: cover;
+	width: 100%;
 
+	@include mq_up(sssp){
+		background-image: url('/assets/img/front/banner_mq.png');
+		height: 700px;
+		margin-bottom: 10%;
+	}
+	@include mq(sp){
+		background-image: url('/assets/img/front/banner_mq.png');
+		height: 330px;
+		margin-bottom: 10%;
+	}
+
+	@include mq_up(tb){
+		background-image: url('/assets/img/front/banner_mq.png');
+		height: 900px;
+		float: left;
+	}
+	@include mq_up(pc) {
+			background-image: url('/assets/img/front/banner.png');
+			height: 800px;
+	}
 	#change_img {
 		position: absolute;	
-		padding-top: 5%;
-		padding-left: 6%;
-		width: 100%;
+		display: inline-block;
 		
-		.clicked {
-			font-size: 200%;
-			font-weight: 500;
-			background-color: white;
-			color:  $main-color;
-			padding: 0 2%;
+		@include mq(tb){
+			padding-top: 12%;
+			padding-left: 6%;
+			width: 100%;	
+			.clicked {
+				font-size: 80%;
+				font-weight: 500;
+				background-color: white;
+				color:  $main-color;
+				padding: 5px 3%;
+			}
+			.not_clicked {
+				font-size: 80%;
+				font-weight: 700;
+				background-color: #47A070;
+				border: white 2px solid;
+				color:  white;
+				padding: 3px 3%;
+			}
+
 		}
-		.not_clicked {
-			font-size: 200%;
-			font-weight: 700;
-			background-color: #47A070;
-			border: white 2px solid;
-			color:  white;
-			padding: 0 2%;
+		@include mq_up(ssp){
+			padding-top: 12%;
+			padding-left: 6%;
+			width: 100%;	
+			.clicked {
+				font-size: 150%;
+				font-weight: 500;
+				background-color: white;
+				color:  $main-color;
+				padding: 5px 3%;
+			}
+			.not_clicked {
+				font-size: 150%;
+				font-weight: 700;
+				background-color: #47A070;
+				border: white 2px solid;
+				color:  white;
+				padding: 3px 3%;
+			}
 		}
+		@include mq_up(pc) {
+			padding-top: 5%;
+			padding-left: 6%;
+			width: 100%;	
+			
+			.clicked {
+				font-size: 200%;
+				font-weight: 500;
+				background-color: white;
+				color:  $main-color;
+				padding: 5px 3%;
+			}
+			.not_clicked {
+				font-size: 200%;
+				font-weight: 700;
+				background-color: #47A070;
+				border: white 2px solid;
+				color:  white;
+				padding: 3px 3%;
+			}
+		}
+		
 	}
 	
 	.block {
@@ -43,7 +127,13 @@ div.top_view {
 			width: 100%;
 		}
 	}
+#banner2{
+	background-image: url('/assets/img/front/banner2.png');
+}
+.promo {
+	background-image: url('/assets/img/front/promo.png');
 
+}
 	// 画像をPC/SPで変更する場合
 	// .slick-slide img {
 	// 	&.hide_sp {

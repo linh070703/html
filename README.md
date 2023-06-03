@@ -53,7 +53,7 @@ JS のソースコードは `/assets/js` にあります。<br>
 
 **開発用ビルド**
 ```shell
-npm run dev
+np
 ```
 または
 ```shell

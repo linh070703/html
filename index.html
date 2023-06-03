@@ -76,29 +76,36 @@
 			</h1>
 
 			<!-- ナビゲーション -->
-			<!-- <div class="drawer_bg" id="drawer_layer"></div> -->
+			<div class="header-toggle-btn" id="toggle">
+				<span class="header-toggle-btn-bar top"></span>
+				<span class="header-toggle-btn-bar middle"></span>
+				<span class="header-toggle-btn-bar bottom"></span>
+			</div>
+			
+			<!-- <div class="drawer_bg" id="drawer_layer"></div> 
 			<nav class="header-nav">
-				<a class="header-nav-list"><img src="./assets/img/common/Screenshot 2023-05-29 163138.png" id="number"></a>
+				<img class="header-nav-list" src="./assets/img/common/number.png" id="number">
 				<ul class="header-nav-list">
 					<li class="header-nav-list-item"><a href="#">サービス</a></li>
-					<li class="header-nav-list-item"><a href="#">特徴</a></li>
-					<li class="header-nav-list-item"><a href="#">実績</a></li>
-					<li class="header-nav-list-item"><a href="#">料金</a></li>
-					<li class="header-nav-list-item"><a href="#">よくある質問</a></li>
+					<li class="header-nav-list-item switching"><a href="#" class="active">特徴</a></li>
+					<li class="header-nav-list-item switching"><a href="#" class="active">実績</a></li>
+					<li class="header-nav-list-item switching"><a href="#" class="active">料金</a></li>
+					<li class="header-nav-list-item switching"><a href="#" class="active">よくある質問</a></li>
 				</ul>
-			</nav>
+			</nav> -->
 
 			<!-- CVボタン -->
 			<div class="header-cv">
-				< class="doc">
+				<span class="doc">
 					<img src="./assets/img/icon/791_me_h.svg" alt=""><br>
 					<a href="">資料ダウンロード</a>
-				</div>
-				<div class="contact">
+				</span>
+				<span class="contact">
 					<img src="./assets/img/icon/Group 29157.png" alt=""><br>
 					<a href="./contact/">お問い合わせ</a>	
-				</div>	
+				</span>	
 			</div>
+
 		</div>
 
 	</header>
@@ -112,12 +119,11 @@
 
 		<main role="main">
 			<!-- 1st View START -->
-			<div class="top_view" id="slide">
+			<div class="top_view">
 				<div id="change_img">
-					<button id="button_img1">初期費用なし・固定費なし</button>
-					<button id="button_img2">法人向け</button>
+					<button class="clicked">初期費用なし・固定費なし</button>
+					<button class="not_clicked">法人向け</button>
 				</div>
-				<img src="./assets/img/front/Screenshot 2023-05-29 172657.png" alt="会社名" id="img1" class="cover click">
 			</div>
 			<!-- 1st View END -->
 			<div class="g-c-btn center">
@@ -135,211 +141,105 @@
 			<!-- /blog/index.htmlにあるブログ一覧と同じもの↓, div.list_article_gridのsassは_wp.scssで定義 -->
 			 <section class="g-p-sec">
 				<div class="center">
-					<img src="./assets/img/article/こんなお悩みありませんか？.svg">
+					<img style ="width: 60%;" src="./assets/img/article/こんなお悩みありませんか？.svg">
 				</div>
 
 				<div class="article-list_grid">
 					<div class="article-list_grid-item">
-						<p>回収をあきらめた債権が<br>溜まっている…。</p>
+						<p style="margin-top:-8%;">回収をあきらめた債権が溜 <br> まっている…。</p>
 						<div class="article-list_grid-item-bg_box">
-							<img src="./assets/img/icon/Repeat Grid 3.png" class="">
+							<img src="./assets/img/icon/Repeat-think.png" class="">
 						</div>
 					</div>
 					<div class="article-list_grid-item">
 						<p>回収に手が回らない…。</p>
 						<div class="article-list_grid-item-bg_box">
-							<img src="./assets/img/icon/Repeat Grid 4.png" class="">
+							<img src="./assets/img/icon/Repeat-think-2.png" class="">
 						</div>
 					</div>
 					<div class="article-list_grid-item">						
 						<p>回収方法が分からない…。</p>
 						<div class="article-list_grid-item-bg_box">
-							<img src="./assets/img/icon/Repeat Grid 5.png" class="">
+							<img src="./assets/img/icon/Repeat-think-3.png" class="">
 						</div>
 					</div>
+					
+					<div class="article-list-item-cat center">
+						<img src="./assets/img/icon/Repeat-think-tb.png" class="">
+					</div>
+					<div class="article-list-item-cat center">
+						<img src="./assets/img/icon/Repeat-think-tb-2.png">
+					</div>
+					<div class="article-list-item-cat center">						
+						<img src="./assets/img/icon/Repeat-think-tb-3.png" class="">
+					</div>
 				</div>
-				<div class="with_caption">
-					<img src="./assets/img/front/Repeat Grid 6.png"  class="cover">	
-					<div class="caption">
+				
+				<div class="with_caption cover">	
+					<div class="caption" id="banner2">
 						<p>このサービスは</p>
 						<p>債権回収率を上げたい企業様</p>
 						<p>に最適なサービスです</p>
 					</div>
 				</div>
-				
+			</section>
+			
+			<article>
 
-					<div class="article-list_grid">
-						<div class="article-list_grid-item">
-							<div href="article.html" class="article-list_grid-item-bg_box">
-								<img src="./assets/img/front/Mask Group 8.png">
-								<div class="article-list_grid-item-text_cont">
-									<!-- タイトル -->
-									<h1>売掛債権を回収できるのは弁護士だけ</h1>
-									<h3>請求に応じない場合は、より強力な法的手段が直ちに講じられてしまうと連想させます。滞納常習者を抑制する効果もあります。</h3>
-								</div>
-							</div>
-						</div>
-
-						<div class="article-list_grid-item">
-							<div href="article.html" class="article-list_grid-item-bg_box">
-								<img src="./assets/img/front/Mask Group 7.png">
-								<div class="article-list_grid-item-text_cont">
-									<!-- タイトル -->
-									<h1>企業イメージを損なわない</h1>
-									<h3>社会的に責任があり、経験豊富な弁護士および、対応に精通したスタッフが法律に基づき回収します。</h3>
-								</div>
-							</div>
-						</div>
-
-						<div class="article-list_grid-item">
-							<div href="article.html" class="article-list_grid-item-bg_box">
-								<img src="./assets/img/front/Mask Group 9.png" >
-
-								<div class="article-list_grid-item-text_cont">
-
-									<!-- タイトル -->
-									<h1>生産性の向上</h1>
-									<h3>回収を一任していただくため、ご負担はございません。本来の担当業務に注力できるため、生産性が向上します。</h3>
-								</div>
+				<!-- <div class="article-list_grid">
+					<div class="article-list_grid-item">
+						<div href="article.html" class="article-list_grid-item-bg_box">
+							<img src="./assets/img/front/Mask Group 8.png">
+							<div class="article-list_grid-item-text_cont">
+								<!-- タイトル 
+								<h1>売掛債権を回収できるのは弁護士だけ</h1>
+								<h3>請求に応じない場合は、より強力な法的手段が直ちに講じられてしまうと連想させます。滞納常習者を抑制する効果もあります。</h3>
 							</div>
 						</div>
 					</div>
 
-					<!-- <div class="g-c-btn center">
-						<a href="./blog/">もっとみる</a>
-					</div> -->
+					<div class="article-list_grid-item">
+						<div href="article.html" class="article-list_grid-item-bg_box">
+							<img src="./assets/img/front/Mask Group 7.png">
+							<div class="article-list_grid-item-text_cont">
+								<!-- タイトル 
+								<h1>企業イメージを損なわない</h1>
+								<h3>社会的に責任があり、経験豊富な弁護士および、対応に精通したスタッフが法律に基づき回収します。</h3>
+							</div>
+						</div>
+					</div>
 
-				</article>
+					<div class="article-list_grid-item">
+						<div href="article.html" class="article-list_grid-item-bg_box">
+							<img src="./assets/img/front/Mask Group 9.png" >
 
-			</section> 
-			<div class="cover">
-				<img src="./assets/img/front/Repeat Grid 7.png">
+							<div class="article-list_grid-item-text_cont">
+
+								<!-- タイトル 
+								<h1>生産性の向上</h1>
+								<h3>回収を一任していただくため、ご負担はございません。本来の担当業務に注力できるため、生産性が向上します。</h3>
+							</div>
+						</div>
+					</div>
+				</div> -->
+
+				<!-- <div class="g-c-btn center">
+					<a href="./blog/">もっとみる</a>
+				</div> -->
+
+			</article>
+
+			<div class="cover promo">
 			</div>	
 			<!-- ブログ END -->
-
-
-
-			<!-- よくあるご質問 START -->
-			<!-- <section class="g-p-sec" id="faq">
-
-				<article class="g-p-wrapper">
-
-					<h2 class="g-c-ttl">よくあるご質問</h2>
-
-					<p class="mb_30">よくあるご質問を入れるページにはFAQ page用のJSON-LDを作成してください。<br>
-					JSON-LDジェネレータ >>> <a href="https://technicalseo.com/tools/schema-markup-generator/" target="_blank" style="color: blue;">https://technicalseo.com/tools/schema-markup-generator/</a><br>
-					作成したJSON-LDは&lt;/body&gt;の前あたりに配置してください。<br>
-					<span style="color: red;">※ FAQのテキスト変更があった場合はJSON-LDの変更も忘れずに！</span></p>
-
-					<dl class="g-c-faq accordion">
-						<dt>
-							<span>質問</span>
-							<p>質問タイトル、質問タイトル、質問タイトル、質問タイトル、</p>
-						</dt>
-						<dd>
-							<div class="detail">
-								<span>回答</span>
-								<p>回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、</p>
-							</div>
-						</dd>
-						<dt>
-							<span>質問</span>
-							<p>質問タイトル、質問タイトル、質問タイトル、質問タイトル、</p>
-						</dt>
-						<dd>
-							<div class="detail">
-								<span>回答</span>
-								<p>回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、</p>
-							</div>
-						</dd>
-						<dt>
-							<span>質問</span>
-							<p>質問タイトル、質問タイトル、質問タイトル、質問タイトル、</p>
-						</dt>
-						<dd>
-							<div class="detail">
-								<span>回答</span>
-								<p>回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、</p>
-							</div>
-						</dd>
-					</dl>
-
-				</article>
-
-			</section> 
-			<!-- よくあるご質問 END -->
-
 
 		</main>
 		<!-- //// MAIN CONTENT END //// -->
 
 	</div>
 
-
-	<!-- パンくずリスト START -->
-	<!-- <div class="g-c-pan">
-
-		<div class="in g-p-wrapper">
-
-			<p id="breadcrumbs">
-				<span>
-					<span>
-						<a href="./" >TOP</a>
-						<span>
-							<a href="#" >第二階層</a>
-							<span>
-								<a href="#" >第三階層</a>
-								<span class="breadcrumb_last" aria-current="page">ページタイトル</span>
-							</span>
-						</span>
-					</span>
-				</span>
-			</p>
-
-		</div>
-
-	</div> -->
-	<!-- パンくずリスト END -->
-
-
 	<!-- //// FOOTER START //// -->
 	<footer class="footer">
-
-		<!-- <div class="g-p-wrapper">
-
-		<!-- 会社名ロゴ 
-		<div class="footer-logo"><a href="./"><img src="./assets/img/common/logo.svg" alt="会社名"></a></div>
-
-
-		<!-- サイトマップ 
-		<section class="footer-sitemap">
-
-			<ul class="footer-sitemap-list">
-				<li class="footer-sitemap-list-item"><a href="">コンテンツ1</a></li>
-				<li class="footer-sitemap-list-item"><a href="">コンテンツ2</a></li>
-				<li class="footer-sitemap-list-item"><a href="">コンテンツ3</a></li>
-				<li class="footer-sitemap-list-item"><a href="">コンテンツ4</a></li>
-				<li class="footer-sitemap-list-item"><a href="">コンテンツ5</a></li>
-				<li class="footer-sitemap-list-item"><a href="">コンテンツ6</a></li>
-				<li class="footer-sitemap-list-item"><a href="">コンテンツ7</a></li>
-				<li class="footer-sitemap-list-item"><a href="">コンテンツ8</a></li>
-			</ul>
-
-		</section>
-
-
-		<!-- ドキュメントリンク 
-		<section class="copyright">
-
-			<ul>
-				<li><a href="./privacy-policy.html">プライバシーポリシー</a></li>
-				<li><a href="">サイトマップ</a></li>
-			</ul>
-
-			<p>Copyright© crop Inc. All Rights Reserved.</p>
-
-		</section>
-		</div> -->
 
 	</footer>
 	<!-- //// FOOTER END //// -->
