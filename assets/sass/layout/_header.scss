@@ -8,9 +8,9 @@ header {
 }
 
 .header-inner {
-	width: inherit;
-	height: 120px;
+	height: 80px;
 	margin: auto;
+	position: relative;
 
 	@include mq_up(ssp){
 		height: 100px;
@@ -22,97 +22,56 @@ header {
 .header-logo {
 	padding-left: 5%;
 	@extend .vertical;
+	margin: 0% 5%;
 	a {
 		display: block;
 
 		img {
-			
-			@include mq_up(sp){
-				width: 1%;
-				
-			}
+			width: 100%;
 		}
 	}
 }
 
 // CV
 .header-cv {
+	width: 300px;
+	height: 100%;
 	position: absolute;
-	height: inherit;
-	text-align: center;
-	display: block;
-	display: flex;	
+	display: flex;
+		.doc{
+			width: 50%;
+			display: block;
+			background-color: $sub-color;
+
+			a {
+				margin: auto 10px;
+				@include link-color(#FFF);
+				font-weight: bold;
+			}
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		.contact {
+			width: 50%;
+			display: block;
+			background-color: $main-color;
+			a {
+				margin: auto 15%;
+				@include link-color(#FFF);
+				font-weight: bold;
+			}
+			&:hover {
+				opacity: 0.8;
+			}
+	}
+	
 
 	@include abs-position(0px, 0px, auto, auto);
 
-	@include mq_up(sssp){
-		width: 50%;
-		img {
-			width: 25%;
-		}
-	}
-	@include mq(sp){
-		width: 35%;
-		right: 60px;
-		img {
-			width: 25%;
-		}
-	}
-
-	@include mq_up(tb){
-		width: 20%;
-		right: 10%;
-		img {
-			width: 25%;
-		}
-	}
-	@include mq_up(pc) {
-		padding-left: 15%;
-		width: 30%;
-		img {
-			width: 25%;
-		}
-	} 
-
 	img {
-		display: flex;
 		margin: auto;
-		margin-top: 5%;
-		margin-bottom: -10%;
-	}
-	.doc{
-		width: 100%;
-		display: block;
-		background-color: $sub-color;
-		a {
-			margin: auto 10px;
-			@include link-color(#FFF);
-			font-weight: bold;
-			font-size: 80%;
-			margin-bottom: 12%;
-		}
-		&:hover {
-			opacity: 1;
-		}
-	}
-		
-	.contact {
-		width: 100%;
-		display: block;
-		background-color: $main-color;
-		text-align: center;
-		a {
-			margin: auto 10px;
-			@include link-color(#FFF);
-			font-weight: bold;
-			font-size: 80%;
-			margin-bottom: 12%;
-		}
-		&:hover {
-			background-color: $hoover-color;
-		}
-	
-	}
+	}	
 }
 
 // ------------　スクロール後FIXED設定 ------------

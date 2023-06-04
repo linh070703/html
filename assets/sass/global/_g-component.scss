@@ -201,8 +201,11 @@ div.g-c-basket_box {
 		border: $main-color 5px solid ;
 		border-radius: 100px;
 		background-color: white; 
+
 		padding: 25px 90px 20px 90px;
-		margin-bottom: 8%;
+// 		margin-bottom: 8%;
+
+		padding: 20px 100px 20px 100px;
 
 		.smolbutton{			
 			font-size: 15px;
@@ -248,6 +251,7 @@ div.g-c-basket_box {
 		background-color: white; 
 		color: $main-color;
 		padding: 5px 75px;
+		padding: 5px 45px;
 		margin: -50px;
 		@include mq(sp){
 			font-size: 14px;

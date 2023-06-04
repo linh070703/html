@@ -320,15 +320,6 @@ ul.article-cgy_list {
 	grid-template-rows: auto;
 	grid-gap: 5%;
 	margin: auto;
-	font-weight: bold;
-	@include mq() {
-		width:100%;
-		display: block;
-	}
-	img{
-		width: 80%;
-		height: 90%;
-	}
 }
 
 .article-list_grid-item {

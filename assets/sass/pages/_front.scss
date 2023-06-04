@@ -10,24 +10,9 @@ div.front {
 
 }
 
-.with_caption{
-	position: relative;	
-	.caption {
-		// position: absolute;
-		transform:  translate(-50%);
-		z-index: 9;
-		width: 100%;
-		max-width: 1080PX;
-		@include abs-position(50%,auto,auto,50%)
-		
-	}
-	h1.capton {
-		display: flex;
-	}	
 
-}
-
-.top_view {
+div.top_view {
+	width: 100%;
 	margin-bottom: 1%;
 	background-repeat: no-repeat;
   	background-size: cover;
@@ -55,69 +40,24 @@ div.front {
 	}
 	#change_img {
 		position: absolute;	
-		display: inline-block;
+		padding-top: 5%;
+		padding-left: 6%;
+		width: 100%;
 		
-		@include mq(tb){
-			padding-top: 12%;
-			padding-left: 6%;
-			width: 100%;	
-			.clicked {
-				font-size: 80%;
-				font-weight: 500;
-				background-color: white;
-				color:  $main-color;
-				padding: 5px 3%;
-			}
-			.not_clicked {
-				font-size: 80%;
-				font-weight: 700;
-				background-color: #47A070;
-				border: white 2px solid;
-				color:  white;
-				padding: 3px 3%;
-			}
-
+		.clicked {
+			font-size: 200%;
+			font-weight: 500;
+			background-color: white;
+			color:  $main-color;
+			padding: 0 2%;
 		}
-		@include mq_up(ssp){
-			padding-top: 12%;
-			padding-left: 6%;
-			width: 100%;	
-			.clicked {
-				font-size: 150%;
-				font-weight: 500;
-				background-color: white;
-				color:  $main-color;
-				padding: 5px 3%;
-			}
-			.not_clicked {
-				font-size: 150%;
-				font-weight: 700;
-				background-color: #47A070;
-				border: white 2px solid;
-				color:  white;
-				padding: 3px 3%;
-			}
-		}
-		@include mq_up(pc) {
-			padding-top: 5%;
-			padding-left: 6%;
-			width: 100%;	
-			
-			.clicked {
-				font-size: 200%;
-				font-weight: 500;
-				background-color: white;
-				color:  $main-color;
-				padding: 5px 3%;
-			}
-			.not_clicked {
-				font-size: 200%;
-				font-weight: 700;
-				background-color: #47A070;
-				border: white 2px solid;
-				color:  white;
-				padding: 3px 3%;
-			}
+		.not_clicked {
+			font-size: 200%;
+			font-weight: 700;
+			background-color: #47A070;
+			border: white 2px solid;
+			color:  white;
+			padding: 0 2%;
 		}
 		
 	}
