@@ -1,15 +1,8 @@
 // 追従(CookiePolicy)の表示
-$(document).ready(function(){
-	$("button").click(function(){
-	  $("#div1").fadeIn();
-	  $("#div2").fadeIn("slow");
-	  $("#div3").fadeIn(3000);
-	});
-  });
 jQuery(function($) {
-	$('#button_img1').click(function() {
-		$("#img1").fadeIn()
-		$('#img2').hide()
+	$('#button_img1').on("click",function() {
+		$('#button_img1').addClass("click")
+		$('#button_img1').addClass("button_clicked")
 	})
 
 	$('#button_im2').click(function() {

@@ -314,16 +314,21 @@ ul.article-cgy_list {
 // 投稿一覧（3列）
 .article-list_grid {
 	width: 80%;
-	height: 90%;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: auto;
-	grid-gap: 5%;
-	margin: auto;
+	height: max-content;
+	@include mq_up(tb) {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-rows: auto;
+		grid-gap: 2%;
+		margin: auto;
+	}
+	@include mq(sp) {
+		width: 100%;
+	}
 }
 
-.article-list_grid-item {
-	height: 100%;
+.-item {
+	// height: 100%;
 	margin-bottom: 20px;
 	
 	@include mq(tb) {
@@ -332,71 +337,114 @@ ul.article-cgy_list {
 	
 	p {
 		position: relative;
-		font-weight: 150%;
-		font-size: 150%;
+		font-weight: bold;
 		top:30%;
 		margin:auto;
 		text-align: center;
-		margin-bottom: 6%; 
+		margin-bottom: 6%;
+
+		@include mq(sp){
+			font-size: 60%;
+
+		}
+		@include mq(tb){
+			font-size: 130%;
+		}
+		@include mq_up(pc) {
+			font-size: 160%;
+		}
 	}
 	
 }
 .article-list-item-cat {
 	display: block;
-	height: 100%;
+	height: max-content;
 	margin-bottom: 5%ss;
 	justify-content: center;
+	width: 100%;
 	img {
 		border-radius: 5%;
+		margin-bottom: 5%;
+		width: 80%;
 	}
-	@include mq_up(pc) {
+	@include mq_up(tb) {
 		display: none;
 	}
 }
+
+.box {
+	background-color: white;
+	height: max-content;
+	padding: 10%;
+	margin: 10% auto;
+	
+	@include mq(sp) {
+		margin: auto;
+	}
+
+	h1 {
+		padding: 15%;
+		font-weight:bold;
+		font-size: x-large;
+		text-align: center;
+	}
+	p {
+		padding: 25%;
+		font-size: x-large ;
+		text-align: left;
+		padding: 5%;
+		width: 100%;
+	}
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 75%;
+		padding: auto;
+		justify-self: center;
+		text-align: center;
+	}
+}
+
 .article-list_grid-item-bg_box {
+	
 	img {
 		top: 0;
 		left: 0;
-		height: 100%;
 		margin: auto;
-		width: 100%;
+		width: 95%;
+		position: relative;
+		#pic_1 {
+			&::before {
+			content: "回収をあきらめた債権が溜まっている…。";
+			position: absolute;
+			}
+		}
+		#pic_2 {
+			&::after {
+			content: "回収に手が回らない…。";
+			position: absolute;
+			bottom: 70px;
+			left: 3.5%;
+			display: block;
+			width: 80%;
+			font-size: 90%;
+			text-align: center;
+			}	
+        // color: white;
+        // background-color: $main-color;
+        // border-radius: 100px;
+        // padding: 15px 30px 15px 30px;
+		}
+		#pic_3 {
+			&::before {
+			content: "回収方法が分からない…。";
+			position: absolute;
+			}
+		}
+		}
 	}
-}
-.article-list_grid-item-thum {
 
-	margin-bottom: 10%;
-	&::before{
-		content: '';
-		display: block;
-		padding-top: 20%;
-	}
-	
-	
-
-	// .pop {
-
-	// 	z-index: 2;
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	background-color: #C94447;
-	// 	color: #FFF;
-	// 	padding: 0.5em 0.7em;
-	// 	border-radius: 0 0 10px 0;
-	// 	letter-spacing: 1px;
-	// 	font-weight: 700;
-	// 	font-size: 12px;
-	// }
-}
-.article-list_grid-item-text_cont {
-	h1{
-		font-weight: 1000;
-		padding: 5%;
-	}
-	font-size: 160%;
-	padding: 15px 15px 20px;
-	justify-content: center;
-}
 .article-list_grid-item-ttl{
 	font-weight: 700;
 	@extend .font_size_16;
@@ -423,13 +471,73 @@ ul.article-list_grid-item-info {
 		}
 	}
 }
-.article-list_grid-item-text {
-	// 本文は3行のみ表示。文末に3点リーダーを挿入。
-	// 表示したい行数とline-height値（emまたはpxの単位あり）を要設定
-	@include textend-dots(3, $base-line-height);
-	@extend .font_size_14;
-	padding: 0;
-}
+#button_debt{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); 
+	width: 60%;
+	margin: auto;
+	#button_1 {
+		background-color: $main-color;
+		height: inherit;
+		color: white !important;
+		padding: 20px;
+		position: relative;
+
+		&::after {
+			content: "";
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			bottom: -15px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			background-image: url(../img/icon/Rectangle.png);
+		}
+    
+	}	
+		// &::before {
+		// 	content: "";
+		// 	position: absolute;
+		// 	bottom: 100;
+		// 	left: 220;
+		// 	width: 200%;
+		// 	height: 10%;
+		// 	background-image: url(../img/icon/Rectangle.png);
+		// }	
+	
+	background-color: #FFF;
+	text-align: center;
+	button {
+		padding: 20px;
+		color: $main-color;
+		vertical-align: middle;
+		font-weight: bold;
+		font-size: small;
+	}				
+}	
+	
+	
+	.article-list_grid-item-text {
+		// 本文は3行のみ表示。文末に3点リーダーを挿入。
+		// 表示したい行数とline-height値（emまたはpxの単位あり）を要設定
+		border: 1px solid $main-color;
+		
+	}
+	#button_2 {
+		&:hover {
+			background-color: $sub-color;
+		}	
+	}
+	#button_3 {
+		&:hover {
+			background-color: $sub-color;
+		}	
+	}
+
+
 
 // タグ一覧
 .article-tag {

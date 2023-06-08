@@ -4,76 +4,367 @@
 // ------------ FRONT ------------
 
 // トップページ
-div.front {
+// div.front {
 
 
 
-}
+// }
 
 
 div.top_view {
 	width: 100%;
-	margin-bottom: 1%;
 	background-repeat: no-repeat;
   	background-size: cover;
 	width: 100%;
-
-	@include mq_up(sssp){
-		background-image: url('/assets/img/front/banner_mq.png');
-		height: 700px;
-		margin-bottom: 10%;
-	}
+	text-align: center;
 	@include mq(sp){
 		background-image: url('/assets/img/front/banner_mq.png');
-		height: 330px;
-		margin-bottom: 10%;
+		height: 300px;
+		padding-top: 7%;
+		padding-left: 6%;
+		p {
+			padding: 5px;
+			font-size: 80%;
+			font-weight: bold;
+		}
 	}
-
-	@include mq_up(tb){
+	@include mq_up(sp){
 		background-image: url('/assets/img/front/banner_mq.png');
-		height: 900px;
-		float: left;
+		height: 500px;
+		padding-top: 10%;
+		padding-left: 6%;
+		p {
+			padding: 10px;
+			font-size: 140%;
+			font-weight: bold;
+		}
+	}
+	
+	@include mq_up(tb){
+		background-image: url('/assets/img/front/banner.png');
+		padding-top: 7%;
+		padding-left: 6%;
+		height: 620px;
+		p {
+			padding: 30px;
+			font-size: 200%;
+			font-weight: bold;
+		}
 	}
 	@include mq_up(pc) {
-			background-image: url('/assets/img/front/banner.png');
-			height: 800px;
+		background-image: url('/assets/img/front/banner.png');
+		height: 810px;
+		padding-top: 8%;
+		padding-left: 6%;
+		p {
+			padding: 30px;
+			font-size: 300%;
+			font-weight: bold;
+		}
 	}
+	
 	#change_img {
 		position: absolute;	
-		padding-top: 5%;
-		padding-left: 6%;
-		width: 100%;
+		display: flex;
 		
-		.clicked {
-			font-size: 200%;
-			font-weight: 500;
+		.clicked {			
 			background-color: white;
 			color:  $main-color;
-			padding: 0 2%;
 		}
 		.not_clicked {
-			font-size: 200%;
-			font-weight: 700;
 			background-color: #47A070;
 			border: white 2px solid;
 			color:  white;
-			padding: 0 2%;
 		}
 		
 	}
-	
-	.block {
-		img {
-			width: 100%;
-		}
-	}
+}
+
 #banner2{
 	background-image: url('/assets/img/front/banner2.png');
+	@include mq(sp) {
+        height: 300px;
+    }
+    @include mq_up(sp){
+        height: 500px;
+    }
+    @include mq_up(tb){
+        height: 800px;
+    }
+    @include mq_up(pc) {
+        height: 600px;
+    }
 }
 .promo {
 	background-image: url('/assets/img/front/promo.png');
-
+	font-weight: bold;
+	p {
+		margin-top: -40%;
+		position: absolute;
+		left: 55%;
+		color: white;
+		text-align: center;
+		width: 50%;
+		padding-right: 20%;
+		display: flex;
+	}
+	button {
+		left: 60%;
+		position: absolute;
+		border: $main-color 2px solid ;
+		border-radius: 100px;
+		background-color: white; 
+		color: $main-color;
+		padding: 2%;
+		font-weight: bold;
+	}
+	img {
+		padding-left: 8%;
+		padding-top: 8%;
+		padding-bottom: 5%;
+		width: 50%;
+	}
+	@include mq(sssp){
+		p {
+			padding-top: 2%;
+			padding-left: 6%;
+			font-size: 35%;
+		}
+		button {
+			font-size: 35%;
+			margin-top: -16%;
+		}
+	}
+	@include mq_up(sssp){
+		p {
+			padding-top: 8%;
+			padding-left: 6%;
+			font-size: 80%;
+		}
+		button {
+			font-size: 70%;
+			margin-top: -16%;
+		}
+	}
+	@include mq_up(sp){
+		p {
+			padding-top: 12%;
+			padding-left: 6%;
+			font-size: 120%;
+		}
+		button {
+			font-size: 100%;
+			margin-top: -16%;
+		}
+	}
+	@include mq_up(tb){
+		p {
+			padding-top: 12%;
+			padding-left: 5%;
+			font-size: 170%;
+		}
+		button {
+			font-size: 120%;
+			margin-top: -16%;
+		}
+	}
 }
+
+table {
+	// border-collapse: collapse;
+	width: 90%;
+	table-layout: fixed;
+	margin: auto;
+	padding:auto;
+	font-weight: bold;
+	border-collapse: collapse;
+	img {
+		width: 100%;
+	}
+}
+
+td {
+	height: 100%; /* Adjust the height as needed */
+	border: 1px solid #ddd;
+	text-align: center;
+	vertical-align: middle;
+}
+th {
+	height:auto;
+}
+
+td:first-child {
+	background-color: $main-color;
+	color: white;
+	img {
+		height: 110%;
+	}
+}
+th:nth-child(2) {
+	border-top: 5px solid $main-color;
+	border-right: 5px solid $main-color;
+	border-left: 5px solid $main-color;
+	background-color: #E0EDE0 !important; 
+	color: $main-color;
+}
+td:nth-child(2) {
+	border-right: 5px solid $main-color;
+	border-left: 5px solid $main-color;
+}
+
+th:not(:first-child), td:not(:first-child) {
+	background-color: white;
+}
+
+#after_table1 {
+	img {
+		margin-top: 10%;
+	}
+}
+
+#choice {
+	display: flex;
+	align-items: center;
+	width: 60%; /* Adjust the width as needed */
+	padding: 10px;
+	margin: 5% auto;
+	background-color: #F2F2F2;
+	
+	img {
+		width: 50%; /* Adjust the image width as needed */
+  		margin: 5%;
+	}
+	button {
+		background-color: #ddd;
+		font-size: 70%;
+		margin: 2% 0;
+	}
+	h1 {
+		color: $main-color;
+		font-weight: bold;
+		margin: 2% 0;
+	}
+	p {
+		padding-right: 5%;
+	}
+	@include mq(sp){
+		button {
+			font-size: 50%;
+		}
+		h1 {
+			font-size: 50%;
+		}
+		p {
+			font-size: 50%;
+		}
+	}
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: [col1-start] 33.33%  [col2-start] 33.33%  [col3-start] 33.33% [col3-end];
+    grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row4-start] auto [row4-start] auto [row5-start] auto [row6-start] auto [row7-start] auto [row8-start] auto [row9-start] auto [row10-start] auto [row11start] auto [row12-start] auto  [row12-end];
+    color: #444;
+	width: 70%;
+	margin: 5% auto;
+  }
+
+  .tab {
+    background-color: fff;
+    color: black;
+    padding: 10%;
+    font-size: 100%;
+    text-align: center;
+	border: 1px #E2E2E2 solid;
+  }
+
+  #a {
+    grid-column: col2-start;
+    grid-row: row1-start;
+	background-color: #F2F2F2;
+	font-weight: bold;
+  }
+  #b {
+    grid-column: col3-start ;
+    grid-row: row1-start;
+	background-color: #F2F2F2;
+	font-weight: bold;
+  }
+  #c {
+	display:flex;
+  	align-items:center;
+	color: white;
+	background-color: $main-color;
+	font-weight: bold;
+  }
+  #d {
+    grid-column: col1-start;
+    grid-row: row3-start / row6-start ;
+    display:flex;
+  	align-items:center;
+	color: $main-color;
+	background-color: $sub-color;
+	font-weight: bold;
+  }
+  #e {
+    grid-column: col1-start ;
+    grid-row: row6-start / row13-start;
+	display:flex;
+  	align-items:center;
+	color: $main-color;
+	background-color: $sub-color;
+	font-weight: bold;
+  }
+  #f {
+	color: $main-color !important;
+	font-weight: bold;
+	display:flex;
+  	align-items:center;
+	font-size: larger;
+  }
+  .bold {
+	font-weight: bold;
+  }
+  #layers {
+    display: block;
+    h1 {
+        font-size: 50pt;
+        color: $main-color;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    h2 {
+        font-weight: bold;
+        font-size: x-large;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    p {
+        font-size: large;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+}
+.odd_layer {
+    display: block;
+	width: 100%;
+	padding-left: 10%;
+}
+#layer1 {
+	background-image: url('/assets/img/common/layer_1.png');
+	background-size: cover;
+	margin: 5% 20% 5% 0; 
+	width: 100%;
+	padding-right: 20%;
+}
+.even_layer {
+    width: 50%;
+    display: block;
+    margin-top: 5%;
+    
+}
+
+
 	// 画像をPC/SPで変更する場合
 	// .slick-slide img {
 	// 	&.hide_sp {
@@ -151,4 +442,3 @@ div.top_view {
 	// 	}
 	// }
 
-}

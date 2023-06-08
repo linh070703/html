@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>Uncity Skeleton Ver.2.0</title>
+	<title>Uncity assignment</title>
 
 	<meta name="keywords" content="キーワード,キーワード,キーワード">
 	<meta name="description" content="ディスクリプション。150文字程度が適当。現在はキーワードが評価されないので、ディスクリプションにキーワードを含めながら文章にするのがよいとされる。">
@@ -63,7 +63,6 @@
 <div id="container" class="front">
 
 	<!-- //// HEADER START //// -->
-
 	<header class="header">
 
 		<div class="header-inner g-p-wrapper">
@@ -75,40 +74,52 @@
 				</a>
 			</h1>
 
-			<!-- ナビゲーション -->
+			<!-- ハンバーガーボタン -->
 			<div class="header-toggle-btn" id="toggle">
 				<span class="header-toggle-btn-bar top"></span>
 				<span class="header-toggle-btn-bar middle"></span>
 				<span class="header-toggle-btn-bar bottom"></span>
 			</div>
-			
-			<!-- <div class="drawer_bg" id="drawer_layer"></div> 
+
+			<!-- ナビゲーション -->
+			<div class="drawer_bg" id="drawer_layer"></div>
 			<nav class="header-nav">
-				<img class="header-nav-list" src="./assets/img/common/number.png" id="number">
 				<ul class="header-nav-list">
-					<li class="header-nav-list-item"><a href="#">サービス</a></li>
-					<li class="header-nav-list-item switching"><a href="#" class="active">特徴</a></li>
-					<li class="header-nav-list-item switching"><a href="#" class="active">実績</a></li>
-					<li class="header-nav-list-item switching"><a href="#" class="active">料金</a></li>
-					<li class="header-nav-list-item switching"><a href="#" class="active">よくある質問</a></li>
+					<li class="header-nav-list-item switching">
+						<a href="#"><img src="./assets/img/common/logo.svg" alt="会社名"></a>
+					</li>
+					<li class="header-nav-list-item"><a href="#faq" class="active">Nav1</a></li>
+					<li class="header-nav-list-item header-nav-list-item--parent">
+						<a href="#">Nav2</a>
+						<ul class="header-nav-list-sub">
+							<li><a href="#">Sab1</a></li>
+							<li><a href="#">Sab2</a></li>
+							<li><a href="#">Sab3</a></li>
+							<li><a href="#">Sab4</a></li>
+						</ul>
+					</li>
+					<li class="header-nav-list-item"><a href="#">Nav3</a></li>
+					<li class="header-nav-list-item"><a href="./news/">お知らせ</a></li>
+					<li class="header-nav-list-item"><a href="./blog/">ブログ</a></li>
+					<li class="header-nav-list-item switching">
+						<ul>
+							<li><a href="#">プライバシーポリシー</a></li>
+							<li><a href="./contact/">お問い合わせ</a></li>
+							<li><a href="#">会社概要</a></li>
+						</ul>
+					</li>
 				</ul>
-			</nav> -->
+			</nav>
 
 			<!-- CVボタン -->
 			<div class="header-cv">
-				<span class="doc">
-					<img src="./assets/img/icon/791_me_h.svg" alt=""><br>
-					<a href="">資料ダウンロード</a>
-				</span>
-				<span class="contact">
-					<img src="./assets/img/icon/Group 29157.png" alt=""><br>
-					<a href="./contact/">お問い合わせ</a>	
-				</span>	
+				<a href="./contact/"><span>お問い合わせ</span></a>
 			</div>
 
 		</div>
 
 	</header>
+
 
 	<!-- //// HEADER END //// -->
 
@@ -121,19 +132,15 @@
 			<!-- 1st View START -->
 			<div class="top_view">
 				<div id="change_img">
-					<button class="clicked">初期費用なし・固定費なし</button>
-					<button class="not_clicked">法人向け</button>
+					<p class="clicked">初期費用なし・固定費なし</p>
+					<p class="not_clicked">法人向け</p>
 				</div>
 			</div>
 			<!-- 1st View END -->
 			<div class="g-c-btn center">
-				<div  class="button1">
-					<p class="smolbutton">まずはお気軽に資料請求</p>
-					<a href="#" class="bigbutton1" style="color: #017F44;">メールで資料を受け取る</a>
-				</div>
-				<div class="button2">
-					<p class="smolbutton2">プロのスタッフがご案内</p>
-					<a href="#" class="bigbutton2" >無料相談のお申し込み</a>
+				<button  id="button1">メールで資料を受け取る</button>
+				<div id="button2">
+					<a href="#" id="bigbutton2" class="button" >無料相談のお申し込み</a>
 				</div>
 			</div>
 
@@ -146,91 +153,359 @@
 
 				<div class="article-list_grid">
 					<div class="article-list_grid-item">
-						<p style="margin-top:-8%;">回収をあきらめた債権が溜 <br> まっている…。</p>
 						<div class="article-list_grid-item-bg_box">
-							<img src="./assets/img/icon/Repeat-think.png" class="">
+							<img  id="pic_1" src="./assets/img/icon/Repeat-think.png">
 						</div>
 					</div>
 					<div class="article-list_grid-item">
-						<p>回収に手が回らない…。</p>
 						<div class="article-list_grid-item-bg_box">
-							<img src="./assets/img/icon/Repeat-think-2.png" class="">
+							<img id="pic_2" src="./assets/img/icon/Repeat-think-2.png">
 						</div>
 					</div>
 					<div class="article-list_grid-item">						
-						<p>回収方法が分からない…。</p>
 						<div class="article-list_grid-item-bg_box">
-							<img src="./assets/img/icon/Repeat-think-3.png" class="">
+							<img id="pic_3" src="./assets/img/icon/Repeat-think-3.png">
 						</div>
 					</div>
-					
-					<div class="article-list-item-cat center">
-						<img src="./assets/img/icon/Repeat-think-tb.png" class="">
-					</div>
-					<div class="article-list-item-cat center">
-						<img src="./assets/img/icon/Repeat-think-tb-2.png">
-					</div>
-					<div class="article-list-item-cat center">						
-						<img src="./assets/img/icon/Repeat-think-tb-3.png" class="">
-					</div>
+				</div>
+				<div class="article-list-item-cat center">
+					<img src="./assets/img/icon/Repeat-think-tb.png" class="">
+				</div>
+				<div class="article-list-item-cat center">
+					<img src="./assets/img/icon/Repeat-think-tb-2.png">
+				</div>
+				<div class="article-list-item-cat center">						
+					<img src="./assets/img/icon/Repeat-think-tb-3.png" class="">
 				</div>
 				
-				<div class="with_caption cover">	
-					<div class="caption" id="banner2">
-						<p>このサービスは</p>
-						<p>債権回収率を上げたい企業様</p>
-						<p>に最適なサービスです</p>
+			</section>
+			<div class="with_caption">	
+				<div class="caption cover" id="banner2">
+					<h3>このサービスは<div style="color: #017F44;">債権回収率を上げたい企業様</div>に最適なサービスです</h3>
+					<p>企業の成功には効率的な債権回収が欠かせません。 そんなお困りの企業様に最適なのがこのサービスです。 <br>私たちは、最適な手法を用いて債権回収率を向上させることをお手伝いいたします。このサービスを利用すれ <br> ば、より多くの収益をあげ、より効率的なビジネス運営を実現することができます。</p>
+				</div>
+			</div>
+
+			<article>
+				<div class="center">
+					<img src="./assets/img/article/弁護士へ委託するメリット.png" alt="">
+				</div>
+				<div class="article-list_grid">
+					<div class="box">
+						<div href="article.html">
+							<img src="./assets/img/icon/Happy_2.png">
+							<div class="article-list_grid-item-text_cont">
+								<!-- タイトル -->
+								<h1>売掛債権を回収できるのは弁護士だけ</h1>
+								<p>請求に応じない場合は、より強力な法的手段が直ちに講じられてしまうと連想させます。滞納常習者を抑制する効果もあります。</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div href="article.html">
+							<img src="./assets/img/icon/Happy_1.png">
+							<div class="article-list_grid-item-text_cont">
+								<!-- タイトル -->
+								<h1>企業イメージを損なわない</h1>
+								<p>社会的に責任があり、経験豊富な弁護士および、対応に精通したスタッフが法律に基づき回収します。</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
+						<div href="article.html">
+							<img src="./assets/img/icon/Happy_3.png" >
+
+							<div class="article-list_grid-item-text_cont">
+
+								<!-- タイトル -->
+								<h1>生産性の向上</h1>
+								<p>回収を一任していただくため、ご負担はございません。本来の担当業務に注力できるため、生産性が向上します。</p>
+							</div>
+						</div>
 					</div>
 				</div>
-			</section>
-			
-			<article>
-
-				<!-- <div class="article-list_grid">
-					<div class="article-list_grid-item">
-						<div href="article.html" class="article-list_grid-item-bg_box">
-							<img src="./assets/img/front/Mask Group 8.png">
-							<div class="article-list_grid-item-text_cont">
-								<!-- タイトル 
-								<h1>売掛債権を回収できるのは弁護士だけ</h1>
-								<h3>請求に応じない場合は、より強力な法的手段が直ちに講じられてしまうと連想させます。滞納常習者を抑制する効果もあります。</h3>
-							</div>
-						</div>
-					</div>
-
-					<div class="article-list_grid-item">
-						<div href="article.html" class="article-list_grid-item-bg_box">
-							<img src="./assets/img/front/Mask Group 7.png">
-							<div class="article-list_grid-item-text_cont">
-								<!-- タイトル 
-								<h1>企業イメージを損なわない</h1>
-								<h3>社会的に責任があり、経験豊富な弁護士および、対応に精通したスタッフが法律に基づき回収します。</h3>
-							</div>
-						</div>
-					</div>
-
-					<div class="article-list_grid-item">
-						<div href="article.html" class="article-list_grid-item-bg_box">
-							<img src="./assets/img/front/Mask Group 9.png" >
-
-							<div class="article-list_grid-item-text_cont">
-
-								<!-- タイトル 
-								<h1>生産性の向上</h1>
-								<h3>回収を一任していただくため、ご負担はございません。本来の担当業務に注力できるため、生産性が向上します。</h3>
-							</div>
-						</div>
-					</div>
-				</div> -->
 
 				<!-- <div class="g-c-btn center">
 					<a href="./blog/">もっとみる</a>
 				</div> -->
 
 			</article>
+			
+			<div class="cover promo">
+				<img src="./assets/img/icon/スクリーンショット 2023-02-13 14.59.22.png" alt="">
+				<div class="other_half">
+					<p>実際の提案書が<br>ダウンロード可能</p>
+					<button>資料ダウンロードはこちら</button>	
+				</div>
+			</div>	
+			<article>
+				<table>
+					<tr>
+						<th>         </th>
+						<th>神田お玉ヶ池法律事務所</th>
+						<th>A社</th>
+						<th>B社</th>
+					</tr>
+					<tr>
+						<td>回収率</td>
+						<td>
+							<img src="./assets/img/table/col_1-row_1.png" alt="">
+						</td>
+						<td>
+							<img src="./assets/img/table/col_2-row_1.png" alt="">
+						</td>
+						<td>
+							<img src="./assets/img/table/col_3-row_1.png" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td>債権回収のアタック件数</td>
+						<td>
+							<img src="./assets/img/table/col_1-row_2.png" alt="">
+						</td>
+						<td>
+							<img src="./assets/img/table/col_2-row_2.png" alt="">
+						</td>
+						<td>
+							<img src="./assets/img/table/col_3-row_2.png" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td>回収件数</td>
+						<td>
+							<img src="./assets/img/table/col_1-row_3.png" alt="">
+						</td>
+						<td>
+							<img src="./assets/img/table/col_2-row_3.png" alt="">
+						</td>
+						<td>
+							<img src="./assets/img/table/col_3-row_3.png" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td>カスタマーサクセスの有無</td>
+						<td>
+							<img src="./assets/img/table/col_1-row_4.png" alt="">
+						</td>
+						<td>
+							<img src="./assets/img/table/col_2-row_4.png" alt="">
+						</td>
+						<td>
+							<img src="./assets/img/table/col_3-row_4.png" alt="">
+						</td>
+					</tr>
+					<tr>
+						<td>完全成果報酬プランの有無</td>
+						<td style="border-bottom: #017F44 5px solid">
+							<img src="./assets/img/table/col_1-row_5.png" alt="">
+						</td>
+						<td>
+							<img src="./assets/img/table/col_2-row_5.png" alt="">
+						</td>
+						<td>
+							<img src="./assets/img/table/col_3-row_5.png" alt="">
+						</td>
+					</tr>
+				</table>
+			</article>
+			<div class="center" id="after_table1">
+				<img style ="width: 20%" src="./assets/img/article/回収実績.png">
+			</div>
+			<div id="button_debt">
+				<button class="article-list_grid-item-text" id="button_1">不動産賃貸管理</button>
+				<div class="article-list_grid-item-text" id="button_2">
+					<button>スクール受講料</button>
+					<!-- <div>
+						<img src="./assets/img/icon/Rectangle.png">
+					</div> -->
+				</div>
+				<div class="article-list_grid-item-text" id="button_3">						
+					<button>あと払い決済代行</button>
+					<!-- <div>
+						<img src="./assets/img/icon/Rectangle.png">
+					</div> -->
+				</div>
+			</div>
+			<div id="choice">
+				<img src="./assets/img/icon/Repeat Grid 25.png" alt="">
+				<div class="other_half">
+					<button>不動産賃貸管理</button>
+					<h1>債権回収率が増加しました。</h1>
+					<p>業種Aでは、〇〇のような課題があり、ご相談いただきました。弊社が〇〇を支援させていただいたことで回収率の増加に繋がりました。</p>	
+				</div>
+			</div>
 
 			<div class="cover promo">
+				<img src="./assets/img/icon/スクリーンショット 2023-02-13 14.59.22.png" alt="">
+				<div class="other_half">
+					<p>実際の提案書が<br>ダウンロード可能</p>
+					<button>資料ダウンロードはこちら</button>	
+				</div>
+			</div>
+
+			<div class="center" style="margin: 10% auto 5% auto;">
+				<img src="./assets/img/article/プラン・料金.png" alt="">
+			</div>
+			<div id="table2">
+				<div class="wrapper">
+					<div></div>
+					<div class="tab" id="a">金額</div>
+					<div class="tab" id="b">内容</div>
+					<div class="tab" id="c">基本パッケージ</div>
+					<div class="tab" id="f">着手金無料（成功報酬のみ</div>
+					<div class="tab" style=" display:flex;align-items:center;" >お打ち合わせ・通知架電・SMS/メール</div>
+					<div class="tab" id="d"> 
+					  <p>任意オプション</p> 
+					</div>
+					<div class="tab" id="e">法的オプション</div>
+					<div class="tab">通知代行</div>
+					<div class="tab bold">1,000円</div>
+					<div class="tab">住民票申請</div>
+					<div class="tab bold">2,000円</div>
+					<div class="tab">訪問</div>
+					<div class="tab bold">20,000円 + 実費</div>
+					<div class="tab">通知代行</div>
+					<div class="tab bold">1,000円</div>
+					<div class="tab">支払督促</div>
+					<div class="tab bold">30,000円 ＋ 実費</div>
+					<div class="tab">訴訟</div>
+					<div class="tab bold">100,000円 ＋ 実費</div>
+					<div class="tab">仮差押</div>
+					<div class="tab bold">100,000円 ＋ 実費</div>
+					<div class="tab">債権執行</div>
+					<div class="tab bold">30,000円 / 第三債務者1件</div>
+					<div class="tab">動産執行</div>
+					<div class="tab bold">50,000円</div>
+					<div class="tab">不動産執行</div>
+					<div class="tab bold">100,000円 ＋ 実費</div>
+					</div>
+			</div>
+
+		<div class="cover promo">
+			<img src="./assets/img/icon/スクリーンショット 2023-02-13 14.59.22.png" alt="">
+			<div class="other_half">
+				<p>実際の提案書が<br>ダウンロード可能</p>
+				<button>資料ダウンロードはこちら</button>	
+			</div>
+		</div>	
+
+		
+		<div class="layers">
+			<div class="odd_layer" id="layer1">
+				<h1>01</h1>
+				<h2>高い回収能力</h2>
+				<p>他社が回収へのアクションを月に数回で回収を行う中で、弊社はKPIの達成に向けて日々回収のアクションを行います。それにより、BNPL債権回収率は半年で70%です。他にもECは60%、家賃は50~80%と回収を成功しています。</p>
+			</div>
+		<div></div>
+			</div>
+			<div>
+
+			</div>
+			<div class="even_layer" id="layer2">
+				<h1>02</h1>
+				<h2>豊富な取り扱い実績</h2>
+				<p>私たちは15年間、専門部署を健全運営しています。上場企業を多数含む、80社と解約なく継続した取引をしております。受任債権は累計40万件200億円を突破しています。</p>
+			</div>
+			<div class="odd_layer" id="layer3">
+				<h1>03</h1>
+				<h2>CS専門部署を保有</h2>
+				<p>カスタマーサクセスの専門部署を持つことで他社よりも圧倒的にPDCAサイクルを回すことができます。それにより効率的な債権回収が可能です。</p>
+			</div>
+			<div class="even_layer" id="layer4">
+				<h1>04</h1>
+				<h2>安心の料金体系</h2>
+				<p>弊社は完全成功報酬で、持ち出しもありません。償却済/事項/少額債権でも同様に受任が可能です。</p>
+			</div>
+		
+		
+
+		<div class="cover promo">
+			<img src="./assets/img/icon/スクリーンショット 2023-02-13 14.59.22.png" alt="">
+			<div class="other_half">
+				<p>実際の提案書が<br>ダウンロード可能</p>
+				<button>資料ダウンロードはこちら</button>	
+			</div>
+		</div>	
+
+			<section class="g-p-sec" id="faq">
+
+				<div class="g-p-wrapper">
+					<div class="center">
+						<img src="./assets/img/article/よくある質問.png" alt="" >
+					</div>
+					<!-- <h2 class="g-c-ttl">よくあるご質問</h2>
+
+					<p class="mb_30">よくあるご質問を入れるページにはFAQ page用のJSON-LDを作成してください。<br>
+					JSON-LDジェネレータ >>> <a href="https://technicalseo.com/tools/schema-markup-generator/" target="_blank" style="color: blue;">https://technicalseo.com/tools/schema-markup-generator/</a><br>
+					作成したJSON-LDは&lt;/body&gt;の前あたりに配置してください。<br>
+					<span style="color: red;">※ FAQのテキスト変更があった場合はJSON-LDの変更も忘れずに！</span></p> -->
+
+					<dl class="g-c-faq accordion">
+						<dt>
+							<span>Q</span>
+							<p>依頼するまでの流れを教えてください。</p>
+						</dt>
+						<dd>
+							<div class="detail">
+								<span>A</span>
+								<p>当事務所は、原則として全ての事件について、法律相談を経てから依頼を受けております。</p>
+							</div>
+						</dd>
+						<dt>
+							<span>Q</span>
+							<p>身に覚えのない請求が来ました。</p>
+						</dt>
+						<dd>
+							<div class="detail">
+								<span>A</span>
+								<p>回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、</p>
+							</div>
+						</dd>
+						<dt>
+							<span>Q</span>
+							<p>送金しましたので確認ください。</p>
+						</dt>
+						<dd>
+							<div class="detail">
+								<span>A</span>
+								<p>回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、</p>
+							</div>
+						</dd>
+						<dt>
+							<span>Q</span>
+							<p>身に覚えのない請求が来ました。</p>
+						</dt>
+						<dd>
+							<div class="detail">
+								<span>A</span>
+								<p>回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、</p>
+							</div>
+						</dd>
+						<dt>
+							<span>Q</span>
+							<p>送金しましたので確認ください。</p>
+						</dt>
+						<dd>
+							<div class="detail">
+								<span>A</span>
+								<p>回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、回答テキスト、</p>
+							</div>
+						</dd>
+					</dl>
+
+				</div>
+
+			</section>	
+			<div class="cover promo">
+				<img src="./assets/img/icon/スクリーンショット 2023-02-13 14.59.22.png" alt="">
+				<div class="other_half">
+					<p>実際の提案書が<br>ダウンロード可能</p>
+					<button>資料ダウンロードはこちら</button>	
+				</div>
 			</div>	
+				
 			<!-- ブログ END -->
 
 		</main>
@@ -239,9 +514,9 @@
 	</div>
 
 	<!-- //// FOOTER START //// -->
-	<footer class="footer">
+	<!-- <footer class="footer">
 
-	</footer>
+	</footer> -->
 	<!-- //// FOOTER END //// -->
 
 

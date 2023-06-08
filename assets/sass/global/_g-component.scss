@@ -55,8 +55,9 @@ div.g-c-pan {
 
 // よくあるご質問
 .g-c-faq {
-
+	margin: auto;
 	text-align:left;
+	width: 80%;
 
 	p {
 		display:inline;
@@ -69,11 +70,11 @@ div.g-c-pan {
 	span {
 		display: inline-block;
 		text-align: center;
-		background-color: $main-color;
-		color: #FFF;
+		color: $main-color;
 		padding: 2px 15px;
 		margin: 0 10px 0 0 ;
 		font-weight: bold;
+		font-size: xx-large;
 		border-radius: 100px;
 		@extend .font_size_12;
 
@@ -84,13 +85,15 @@ div.g-c-pan {
 	dt {
 		cursor:pointer;
 		font-weight: bold;
-		padding: 20px 0;
-		border-bottom: $border-color 1px solid;
+		padding: 20px;
+		margin: 2%;
+		background-color: #F2F2F2;
+		border-radius: 10px;
 
 		p {
 			padding: 0 35px 0 0;
 
-			background-image: url(../img/arrow/arrow_open.svg);
+			background-image: url(../img/arrow/open.png);
 			background-position: right center;
 			background-size: 20px 20px;
 
@@ -101,17 +104,15 @@ div.g-c-pan {
 
 		&:hover {
 
-			p {
-				text-decoration: underline;
-			}
+			background-color: #DDDDDD;
 		}
 
 		&.open {
 
 			p {
-				background-image: url(../img/arrow/arrow_close.svg);
+				background-image: url(../img/arrow/close.png);
 				background-position: right center;
-				background-size: 20px 20px;
+				background-size: 20px 2px;
 			}
 		}
 	}
@@ -121,10 +122,10 @@ div.g-c-pan {
 		line-height:1.5em;
 
 		div.detail {
-			padding:30px 0 30px 60px;
+			padding:30px 0 30px 30px;
 
 			@include mq(sp) {
-				padding:10px 0 20px 10px;
+				padding:10px 0 20px 60px;
 			}
 
 			img {
@@ -196,83 +197,29 @@ div.g-c-basket_box {
 // #1{
 // 	background-color: white;
 // }
+// @include mq(pc) {
+// 	.bigbutton {
+// 		font-size: 300%;
+// 		padding: 10px 10px;
+// 	}
+// 	.smolbutton {
+// 		font-size: 20px;
+// 		padding: 10px 60px;
+// 		margin-left: -3%;
+// 	}
+// }
+// @include mq_up(pc) {
+// 	.bigbutton {
+// 		font-size: 300%;
+// 		padding: 10px 10px;
+// 	}
+// 	.smolbutton {
+// 		font-size: 20px;
+// 		padding: 10px 60px;
+// 		margin-left: -3%;
+// 	}
+// }
 
-.button1 {
-		border: $main-color 5px solid ;
-		border-radius: 100px;
-		background-color: white; 
-
-		padding: 25px 90px 20px 90px;
-// 		margin-bottom: 8%;
-
-		padding: 20px 100px 20px 100px;
-
-		.smolbutton{			
-			font-size: 15px;
-			font-weight: 1000;
-			border-radius: 100px;
-			position: absolute;
-			background-color: $main-color; 
-			color: white;
-			padding: 10px 70px;
-			margin: -50px;
-			margin-right: 10%;
-			@include mq(sp){
-				font-size: 14px;
-				padding: 10px 60px;
-				margin-right: 5%;
-			}
-		}
-		.bigbutton1 {
-			font-size: 20px;
-			@include mq(sp){
-				font-size: 16px;
-				padding: 5px 3px;
-			}
-		}
-		
-		&:hover{
-			background-color: #F0F7F4; 
-		}
-}
-
-.button2 {	
-	background-color: $main-color;
-	border-radius: 100px;
-	padding: 30px 100px 25px 100px;
-	margin-bottom: 8%;
-
-	.smolbutton2 {
-		font-weight: 1000;
-		font-size: 15px;
-		border-radius: 100px;
-		position: absolute;
-		border: $main-color 5px solid ;
-		background-color: white; 
-		color: $main-color;
-		padding: 5px 75px;
-		padding: 5px 45px;
-		margin: -50px;
-		@include mq(sp){
-			font-size: 14px;
-			padding: 10px 60px;
-			margin-right: 5%;
-		}
-		
-	}
-
-	.bigbutton2 {
-		font-size: 20px;
-		@include mq(sp){
-			font-size: 16px;
-			padding: 5px 3px;
-		}
-	}
-		
-	&:hover {
-		background-color: $hoover-color;
-	}
-}
 
 // BUTTON
 %btn {
@@ -478,6 +425,85 @@ div#pageup {
 		margin: 20px auto;
 		.policy_content {
 			padding: 10px;
+		}
+	}
+}
+
+.caption {
+	font-weight: bold;
+	@include mq(sp){
+		padding-left: 8%;
+		p {
+			padding-top: 5%;
+			font-size: 70%;
+			width: 80%;
+		}
+		h3 {
+			font-size: 90%;
+		}
+		div {
+			padding-top: 1%;
+			padding-bottom: 1%;
+		}
+	}
+	@include mq_up(sp){
+		padding-left: 8%;
+		padding-top: 6%;
+		p {
+			padding-top: 5%;
+			font-size: 70%;
+		}
+		h3 {
+			font-size: 100%;
+		}
+		div {
+			padding-top: 1%;
+			padding-bottom: 1%;
+		}
+	}
+	@include mq_up(tb){
+		padding-left: 10%;
+		padding-top: 10%;
+		p {
+			padding-top: 5%;
+			font-size: 80%;
+		}
+		h3 {
+			font-size: 300%;
+		}
+		div {
+			padding-top: 4%;
+			padding-bottom: 4%;
+		}
+	}
+	@include mq_up(tb){
+		padding-left: 10%;
+		padding-top: 10%;
+		p {
+			padding-top: 5%;
+			font-size: 80%;
+		}
+		h3 {
+			font-size: 300%;
+		}
+		div {
+			padding-top: 4%;
+			padding-bottom: 4%;
+		}
+	}
+	@include mq_up(pc) {
+		
+	padding-left: 15%;
+	padding-top: 15%;
+		p {
+			padding-top: 5%;
+		}
+		h3 {
+			font-size: 300%;
+		}
+		div {
+			padding-top: 3%;
+			padding-bottom: 3%;
 		}
 	}
 }
