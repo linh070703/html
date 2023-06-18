@@ -5,9 +5,9 @@
 // ------------ 記事一覧 ------------*/
 
 // メイン LAYOUT
-div.edit {
+// div.edit {
 
-}
+// }
 
 // サイドバー LAYOUT
 .article-aside {
@@ -247,11 +247,11 @@ ul.article-cgy {
 	}
 }
 // カテゴリー一覧（リスト型）
-ul.article-cgy_list {
-	a {
+// ul.article-cgy_list {
+// 	a {
 
-	}
-}
+// 	}
+// }
 
 // 投稿一覧（リスト型）
 .article-list {
@@ -407,18 +407,15 @@ ul.article-cgy_list {
 }
 
 .article-list_grid-item-bg_box {
-	
+	position: relative;
 	img {
 		top: 0;
 		left: 0;
 		margin: auto;
 		width: 95%;
-		position: relative;
-		#pic_1 {
-			&::before {
+		#pic_1 &::before {
 			content: "回収をあきらめた債権が溜まっている…。";
 			position: absolute;
-			}
 		}
 		#pic_2 {
 			&::after {

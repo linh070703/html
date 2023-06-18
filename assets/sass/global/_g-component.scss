@@ -431,6 +431,7 @@ div#pageup {
 
 .caption {
 	font-weight: bold;
+	padding: 20%;
 	@include mq(sp){
 		padding-left: 8%;
 		p {

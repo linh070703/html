@@ -44,14 +44,14 @@
         @extend .font_size_18;
     }
 
-    h4 {
-    }
+    // h4 {
+    // }
 
-    h5 {
-    }
+    // h5 {
+    // }
 
-    h6 {
-    }
+    // h6 {
+    // }
 
     // リンク設定
     a {
@@ -83,11 +83,12 @@
 
     // 中央揃え
     .center {
-        img {
-            width: 10%;
-            margin: 15% auto;
+        p {
+            font-size: 48;
+            font-weight: bold;
+            text-align: center;
+            margin: 5% auto;
         }
-        
     }
 
     // 右揃え
@@ -348,6 +349,7 @@ article {
 .cover {
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 #button1 {
     border: $main-color 5px solid ;
